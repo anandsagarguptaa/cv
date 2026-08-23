@@ -8030,6 +8030,7 @@ function initCvContactModal(){
     form.dataset.bound = "1";
     const status = document.getElementById("cvModalStatus");
     const sendBtn = document.getElementById("cvSend");
+    window.CV_CONTACT_API = "https://modmail-zayen-anand.wisp.uno/api/contact";
     const apiUrl = window.CV_CONTACT_API || "/api/contact";
 
     function setStatus(msg, kind){
