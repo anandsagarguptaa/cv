@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><head><script>
-window.CV_CONTACT_API = "https://modmail-zayen-anand.wisp.uno/api/contact";
-window.CV_CONTACT_API_KEY = "ANAND@560(MEOW-MEOW)[GG]";
-</script>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Anand Sagar Gupta | Portfolio</title>
-
+<script>
+window.CV_CONTACT_API = "https://modmail-zayen-anand.wisp.uno/api/contact";
+window.CV_CONTACT_API_KEY = "ANAND@560(MEOW-MEOW)[GG]";
+</script>
 
 <meta name="description" content="Anand Sagar Gupta — Discord &amp; Community Manager × Developer. 4+ years in gaming, creator and roleplay communities. Bots, dashboards and AI tools.">
 <meta property="og:title" content="Anand Sagar Gupta | Portfolio">
@@ -3016,13 +3016,13 @@ button.js-open-cv-modal.btn{
      GLOBAL MOUSE LIGHT
 ======================================================= -->
 
-<div class="cursor-light" style="left: 843px; top: 517px;"></div>
+<div class="cursor-light" style="left: 1440px; top: 126px;"></div>
 
-<div class="scroll-progress" id="scrollProgress" style="width: 99.9922%;"></div>
+<div class="scroll-progress" id="scrollProgress" style="width: 0%;"></div>
 <div class="film-grain" aria-hidden="true"></div>
 <div class="aurora" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-<div class="cursor-dot" id="cursorDot" style="left: 843px; top: 517px;"></div>
-<div class="cursor-ring" id="cursorRing" style="left: 843px; top: 517px;"></div>
+<div class="cursor-dot" id="cursorDot" style="left: 1440px; top: 126px;"></div>
+<div class="cursor-ring" id="cursorRing" style="left: 1440px; top: 126px;"></div>
 
 
 
@@ -3080,7 +3080,10 @@ button.js-open-cv-modal.btn{
 
 </nav>
 
-
+<div class="phone-preview-bar" id="phonePreviewBar">
+    📱 Phone preview · 390px
+    <button type="button" id="phonePreviewExit">Exit (Alt+Shift+P)</button>
+</div>
 
 
 
@@ -3298,7 +3301,7 @@ button.js-open-cv-modal.btn{
 
         <div class="stat magnetic" data-editable="" data-type="text" style="--mx: 50%; --my: 50%;">
 
-            <strong data-count="4" data-suffix="+">0+</strong>
+            <strong data-count="4" data-suffix="+">4+</strong>
 
             <span>
                 YEARS EXPERIENCE
@@ -3309,7 +3312,7 @@ button.js-open-cv-modal.btn{
 
         <div class="stat magnetic" data-editable="" data-type="text" style="--mx: 50%; --my: 50%;">
 
-            <strong data-count="6" data-suffix="">0</strong>
+            <strong data-count="6" data-suffix="">6</strong>
 
             <span>
                 CREATOR COMMUNITIES
@@ -3320,7 +3323,7 @@ button.js-open-cv-modal.btn{
 
         <div class="stat magnetic" data-editable="" data-type="text" style="--mx: 50%; --my: 50%;">
 
-            <strong data-count="9" data-suffix="+">0+</strong>
+            <strong data-count="9" data-suffix="+">9+</strong>
 
             <span>
                 TECH SKILLS
@@ -3331,7 +3334,7 @@ button.js-open-cv-modal.btn{
 
         <div class="stat magnetic" data-editable="" data-type="text" style="--mx: 50%; --my: 50%;">
 
-            <strong data-count="24" data-suffix="/7">0/7</strong>
+            <strong data-count="24" data-suffix="/7">24/7</strong>
 
             <span>
                 COMMUNITY MINDSET
@@ -4028,7 +4031,664 @@ button.js-open-cv-modal.btn{
      EDITOR PANEL
 ======================================================= -->
 
+<div id="editPanel" class="">
 
+    <div class="edit-head">
+
+        <h3>
+            ✦ Website Editor
+        </h3>
+
+        <button class="edit-close" id="closeEditor">
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="edit-help">
+
+        <b>
+            EDIT MODE
+        </b>
+
+        <br>
+
+        Click any editable item on the website.
+        The correct tools will automatically appear.
+
+        <br><br>
+
+        Shortcut:
+        <b>
+            ALT + SHIFT + M
+        </b>
+
+    </div>
+
+
+    <div class="selected-info" id="selectedInfo">Nothing selected</div>
+
+
+    <!-- TEXT TOOLS -->
+
+    <div id="textTools" class="tool-section" style="display: block;">
+
+        <div class="tool-title">
+            TEXT EDITOR
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                FULL TEXT
+            </label>
+
+            <textarea id="textContent"></textarea>
+
+        </div>
+
+        <div class="edit-actions">
+
+            <button class="edit-btn primary" id="applyText">
+                Apply Text
+            </button>
+
+        </div>
+
+
+        <div class="edit-field">
+
+            <label>
+                SELECT TEXT ON PAGE → GRADIENT
+            </label>
+
+            <div class="edit-row">
+
+                <input type="color" id="gradientStart" value="#8b5cf6">
+
+                <input type="color" id="gradientEnd" value="#22d3ee">
+
+            </div>
+
+        </div>
+
+
+        <div class="gradient-preview" id="gradientPreview" style="background: linear-gradient(90deg, rgb(139, 92, 246), rgb(34, 211, 238));"></div>
+
+
+        <div class="edit-actions">
+
+            <button class="edit-btn primary" id="applyGradient">
+                Apply Selected
+            </button>
+
+            <button class="edit-btn" id="removeGradient">
+                Remove
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- LINK TOOLS -->
+
+    <div id="linkTools" class="tool-section" style="display: none;">
+
+        <div class="tool-title">
+            BUTTON / LINK
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                TEXT
+            </label>
+
+            <input id="linkText" type="text">
+
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                URL
+            </label>
+
+            <input id="linkURL" type="text" placeholder="https://...">
+
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                BACKGROUND IMAGE URL
+            </label>
+
+            <input id="buttonImageURL" type="text" placeholder="https://...">
+
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                BACKGROUND IMAGE FROM PC
+            </label>
+
+            <input id="buttonImageFile" type="file" accept="image/*">
+
+        </div>
+
+        <div class="edit-actions">
+
+            <button class="edit-btn primary" id="saveLink">
+                Save Button
+            </button>
+
+            <button class="edit-btn" id="clearButtonImage">
+                Remove Image
+            </button>
+
+        </div>
+
+
+        <div class="edit-field">
+
+            <label>
+                BUTTON POSITION
+            </label>
+
+            <div class="move-buttons">
+
+                <button class="edit-btn blue" id="moveUp">
+                    ↑ Move Up
+                </button>
+
+                <button class="edit-btn blue" id="moveDown">
+                    ↓ Move Down
+                </button>
+
+            </div>
+
+            <div class="order-info" id="orderInfo">Position 3 / 3</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMAGE TOOLS -->
+
+    <div id="imageTools" class="tool-section" style="display: none;">
+
+        <div class="tool-title">
+            PROFILE PHOTO
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                SELECT PHOTO FROM PC
+            </label>
+
+            <input id="profileImageFile" type="file" accept="image/*">
+
+        </div>
+
+        <button class="edit-btn primary" id="saveProfileImage" style="width:100%;margin-top:12px">
+            Apply Photo
+        </button>
+
+    </div>
+
+
+    <!-- EXPERIENCE TOOLS -->
+
+    <div id="experienceTools" class="tool-section" style="display: none;">
+
+        <div class="tool-title">
+            EXPERIENCE CARD
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                STATUS
+            </label>
+
+            <select id="experienceStatus">
+
+                <option value="current">
+                    CURRENT — Green
+                </option>
+
+                <option value="past">
+                    PAST — Blue
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                SERVER / EXPERIENCE URL
+            </label>
+
+            <input id="experienceURL" type="text">
+
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                CARD BACKGROUND URL
+            </label>
+
+            <input id="experienceImageURL" type="text">
+
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                CARD IMAGE FROM PC
+            </label>
+
+            <input id="experienceImageFile" type="file" accept="image/*">
+
+        </div>
+
+        <div class="edit-actions">
+
+            <button class="edit-btn primary" id="saveExperience">
+                Save Experience
+            </button>
+
+            <button class="edit-btn blue" id="moveExperienceUp">
+                ↑ Move Up
+            </button>
+
+        </div>
+
+        <button class="edit-btn blue" id="moveExperienceDown" style="width:100%;margin-top:8px">
+            ↓ Move Down
+        </button>
+
+    </div>
+
+
+    <!-- ADD BUTTON -->
+
+    <div id="buttonManager" class="tool-section">
+
+        <div class="tool-title">
+            ADD NEW BUTTON
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                CATEGORY
+            </label>
+
+            <select id="buttonCategory">
+
+                <option value="hero-buttons">
+                    Hero Buttons
+                </option>
+
+                <option value="contact-buttons">
+                    Contact Buttons
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                BUTTON TEXT
+            </label>
+
+            <input id="newButtonText" type="text" placeholder="My Button">
+
+        </div>
+
+        <div class="edit-field">
+
+            <label>
+                BUTTON URL
+            </label>
+
+            <input id="newButtonURL" type="text" placeholder="https://...">
+
+        </div>
+
+        <button class="edit-btn green" id="addButton" style="width:100%;margin-top:10px">
+            + Add Button
+        </button>
+
+    </div>
+
+
+    <!-- SAVE -->
+
+    <div class="tool-section">
+
+        <div class="tool-title">
+            SAVE TO PC
+        </div>
+
+        <div class="edit-help">
+
+            <b>
+                Step 1:
+            </b>
+
+            Connect your current index.html.
+
+            <br>
+
+            <b>
+                Step 2:
+            </b>
+
+            Edit website.
+
+            <br>
+
+            <b>
+                Step 3:
+            </b>
+
+            Save to PC File.
+
+        </div>
+
+
+        <div class="edit-actions">
+
+            <button class="edit-btn blue" id="connectFile">
+                📂 Connect index.html
+            </button>
+
+            <button class="edit-btn primary" id="saveFile">
+                💾 Save to PC
+            </button>
+
+        </div>
+
+
+        <button class="edit-btn" id="downloadFile" style="width:100%;margin-top:8px">
+            ⬇ Download Updated index.html
+        </button>
+
+
+        <div id="fileStatus" style="
+                color:#777;
+                font-size:10px;
+                margin-top:9px;
+                text-align:center;
+            ">
+            No file connected
+        </div>
+
+    </div>
+
+
+
+<div id="enhancedEditorTools" class="enhanced-tool">
+    <div class="enh-title">Experience / Servers</div>
+    <div class="enh-help">Select a creator/server card in EDIT mode. You can add cards like Lazy Assassin, edit every field, change its button, move it above/below, or delete it. The original website design is not changed.</div>
+
+    <div class="enh-row">
+        <button class="enh-btn green" id="enhAddExperience">＋ Add Creator / Server</button>
+        <button class="enh-btn red" id="enhDeleteExperience">✕ Delete Selected</button>
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn blue" id="enhMoveExperienceUp">↑ Move Card Up</button>
+        <button class="enh-btn blue" id="enhMoveExperienceDown">↓ Move Card Down</button>
+    </div>
+
+    <div class="enh-row">
+        <input id="enhExpName" placeholder="Creator / Server name">
+        <input id="enhExpRole" placeholder="Role e.g. Main Moderator">
+    </div>
+    <div class="enh-row three" style="margin-top:6px">
+        <label style="font-size:10px;color:#9da0aa;display:flex;align-items:center;gap:5px">
+            <input type="checkbox" id="enhBadgeVerified"> Verified
+        </label>
+        <label style="font-size:10px;color:#9da0aa;display:flex;align-items:center;gap:5px">
+            <input type="checkbox" id="enhBadgePartner"> Partner
+        </label>
+        <label style="font-size:10px;color:#9da0aa;display:flex;align-items:center;gap:5px">
+            <input type="checkbox" id="enhBadgeDiscoverable"> Discoverable
+        </label>
+    </div>
+
+    <div class="enh-row">
+        <select id="enhExpStatus"><option value="current">CURRENT — Green</option><option value="past">FORMER — Blue</option></select>
+        <input id="enhExpURL" placeholder="Server / creator URL">
+    </div>
+    <textarea id="enhExpDesc" placeholder="Card description"></textarea>
+    <input id="enhExpImage" placeholder="Card background image URL">
+    <div class="enh-help" style="margin-top:8px">Visit buttons (max 3) — Web / Old Server / New Server etc.</div>
+    <div class="enh-row">
+        <select id="enhExpBtnPick" data-bound-pick="1">
+            <option value="0">Button 1: Visit Web ↗</option>
+            <option value="1">Button 2: Visit Server ↗</option>
+            <option value="2">Button 3 (empty)</option>
+        </select>
+        <span></span>
+    </div>
+    <div class="enh-row">
+        <input id="enhExpButtonText" placeholder="Button text e.g. Visit Web ↗">
+        <input id="enhExpButtonURL" placeholder="Button URL">
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn purple" id="enhSaveExperience">SAVE CARD</button>
+        <button class="enh-btn green" id="enhSaveExpButton">SAVE THIS BUTTON</button>
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn" id="enhAddCardButton">＋ ADD BUTTON</button>
+        <button class="enh-btn red" id="enhDelExpButton">✕ DELETE BUTTON</button>
+    </div>
+    <div id="enhExpStatusMsg" class="enh-status">Selected: Omegle Community</div>
+
+
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">Skills</div>
+    <div class="enh-help">EDIT mode me skill card par click karo. Name, description, icon/text, learning status, order, add/delete sab control kar sakte ho. Original skill-card design same rahega.</div>
+    <div class="enh-row">
+        <button class="enh-btn green" id="enhAddSkill">＋ ADD SKILL</button>
+        <button class="enh-btn red" id="enhDeleteSkill">✕ DELETE SKILL</button>
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn blue" id="enhMoveSkillUp">↑ MOVE UP</button>
+        <button class="enh-btn blue" id="enhMoveSkillDown">↓ MOVE DOWN</button>
+    </div>
+    <div class="enh-row">
+        <input id="enhSkillName" placeholder="Skill name">
+        <input id="enhSkillIcon" placeholder="Icon / emoji / short mark">
+    </div>
+    <textarea id="enhSkillDesc" placeholder="Skill description"></textarea>
+    <div class="enh-row">
+        <select id="enhSkillLearning">
+            <option value="none">No learning label</option>
+            <option value="learning">Currently Learning</option>
+        </select>
+        <input id="enhSkillTag" placeholder="Tag (e.g. C++, Python)">
+    </div>
+    <div class="enh-row">
+        <select id="enhSkillLevel">
+            <option value="">No level badge</option>
+            <option value="beginner">BEGINNER</option>
+            <option value="intermediate">INTERMEDIATE</option>
+            <option value="advanced">ADVANCED</option>
+        </select>
+        <span></span>
+    </div>
+
+    <div class="enh-row">
+        <button class="enh-btn purple" id="enhSaveSkill">SAVE SKILL</button>
+        <button class="enh-btn" id="enhAddSkillTag">＋ ADD TAG</button>
+    </div>
+    <div id="enhSkillStatus" class="enh-status">Skill saved ✓</div>
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">Selected Text — Size / Colour / Blend</div>
+    <div class="enh-help">EDIT mode me card ya page ke text par click karo. Text ko white banane ki zarurat nahi — original/gradient/muted/green/blue/purple/cyan blend use kar sakte ho, plus exact size aur colour.</div>
+    <div class="enh-row three">
+        <input id="enhFontSize" type="number" min="8" max="180" placeholder="Size px">
+        <select id="enhTextBlend">
+            <option value="original">Original / Blend</option>
+            <option value="muted">Muted</option>
+            <option value="white">White</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="cyan">Cyan</option>
+            <option value="custom">Custom colour</option>
+        </select>
+        <input id="enhTextColor" type="color" value="#969baa" title="Custom text colour">
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn green" id="enhApplyTextStyle">APPLY TEXT STYLE</button>
+        <button class="enh-btn" id="enhResetTextStyle">RESET TEXT STYLE</button>
+    </div>
+    <div id="enhTextStatus" class="enh-status">No text selected.</div>
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">Stats — Numbers</div>
+    <div class="enh-help">About section ke 4 stats edit karo (e.g. 4+, YEARS EXPERIENCE).</div>
+    <div class="enh-row">
+        <input id="enhStat0Num" placeholder="Stat 1 number">
+        <input id="enhStat0Label" placeholder="Stat 1 label">
+    </div>
+    <div class="enh-row">
+        <input id="enhStat1Num" placeholder="Stat 2 number">
+        <input id="enhStat1Label" placeholder="Stat 2 label">
+    </div>
+    <div class="enh-row">
+        <input id="enhStat2Num" placeholder="Stat 3 number">
+        <input id="enhStat2Label" placeholder="Stat 3 label">
+    </div>
+    <div class="enh-row">
+        <input id="enhStat3Num" placeholder="Stat 4 number">
+        <input id="enhStat3Label" placeholder="Stat 4 label">
+    </div>
+    <button class="enh-btn purple" id="enhSaveStats" style="width:100%;margin-top:6px">SAVE STATS</button>
+    <div id="enhStatStatus" class="enh-status"></div>
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">About Highlights (optional)</div>
+    <div class="enh-help">Chhote cards About ke stats ke upar. Khali chhodo ya apne numbers add karo.</div>
+    <div class="enh-row">
+        <input id="enhHighlightValue" placeholder="Value e.g. 50K+">
+        <input id="enhHighlightLabel" placeholder="Label e.g. MEMBERS">
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn green" id="enhAddHighlight">＋ ADD HIGHLIGHT</button>
+        <button class="enh-btn red" id="enhClearHighlights">✕ CLEAR ALL</button>
+    </div>
+    <div id="enhHighlightStatus" class="enh-status"></div>
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">Contact buttons</div>
+    <div class="enh-help">Contact section ke buttons (DM Me, Discord, Email…). Select karke edit / move / delete. Naya add bhi kar sakte ho.</div>
+    <div class="enh-row">
+        <input id="enhContactLabel" placeholder="Button label e.g. Discord">
+        <input id="enhContactURL" placeholder="URL (DM Me ke liye khali = modal)">
+    </div>
+    <div class="enh-row">
+        <select id="enhContactKind">
+            <option value="link">Normal link</option>
+            <option value="modal">Open DM modal</option>
+        </select>
+        <span></span>
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn green" id="enhContactSave">SAVE BUTTON</button>
+        <button class="enh-btn blue" id="enhContactAdd">＋ ADD</button>
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn blue" id="enhContactUp">↑ Move</button>
+        <button class="enh-btn blue" id="enhContactDown">↓ Move</button>
+        <button class="enh-btn red" id="enhContactDelete">✕ Delete</button>
+    </div>
+    <div id="enhContactStatus" class="enh-status"></div>
+
+
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">About Cards</div>
+    <div class="enh-help">About grid ke 4 cards ka title + text.</div>
+    <select id="enhAboutPick" style="width:100%;margin-bottom:6px">
+        <option value="0">Card 1</option>
+        <option value="1">Card 2</option>
+        <option value="2">Card 3</option>
+        <option value="3">Card 4</option>
+    </select>
+    <input id="enhAboutTitle" placeholder="Card title" style="width:100%;margin-bottom:6px">
+    <textarea id="enhAboutBody" placeholder="Card body"></textarea>
+    <button class="enh-btn purple" id="enhSaveAbout" style="width:100%;margin-top:6px">SAVE ABOUT CARD</button>
+    <div id="enhAboutStatus" class="enh-status"></div>
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">History — Undo / Redo</div>
+    <div class="enh-row">
+        <button class="enh-btn blue" id="enhUndo">↶ UNDO</button>
+        <button class="enh-btn blue" id="enhRedo">↷ REDO</button>
+    </div>
+    <div id="enhHistoryStatus" class="enh-status">History 4 / 4</div>
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">Backup &amp; Preview</div>
+    <div class="enh-row">
+        <button class="enh-btn green" id="enhRestoreBackup">↺ RESTORE BACKUP</button>
+        <button class="enh-btn red" id="enhClearBackup">✕ CLEAR BACKUP</button>
+    </div>
+    <button class="enh-btn purple" id="enhPreviewPublic" style="width:100%;margin-top:6px">👁 PREVIEW PUBLIC (new tab)</button>
+    <div id="enhBackupStatus" class="enh-status">Edit applied ✓  ·  File save: Alt+Shift+S</div>
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">Theme Presets</div>
+    <div class="enh-row three">
+        <button class="enh-btn purple" id="enhThemeDefault">Purple</button>
+        <button class="enh-btn blue" id="enhThemeOcean">Ocean</button>
+        <button class="enh-btn green" id="enhThemeForest">Forest</button>
+    </div>
+    <div class="enh-row">
+        <button class="enh-btn" id="enhThemeSunset">Sunset</button>
+        <button class="enh-btn" id="enhThemeMono">Mono</button>
+    </div>
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">Sections Show / Hide</div>
+    <div class="enh-row">
+        <label style="font-size:10px;color:#9da0aa"><input type="checkbox" id="enhSecAbout" checked=""> About</label>
+        <label style="font-size:10px;color:#9da0aa"><input type="checkbox" id="enhSecExperience" checked=""> Experience</label>
+    </div>
+    <div class="enh-row">
+        <label style="font-size:10px;color:#9da0aa"><input type="checkbox" id="enhSecSkills" checked=""> Skills</label>
+        <label style="font-size:10px;color:#9da0aa"><input type="checkbox" id="enhSecContact" checked=""> Contact</label>
+    </div>
+    <button class="enh-btn purple" id="enhApplySections" style="width:100%;margin-top:6px">APPLY SECTIONS</button>
+
+    <div class="enhanced-divider"></div>
+    <div class="enh-title">SEO / Page Meta</div>
+    <input id="enhPageTitle" placeholder="Page title" style="width:100%;margin-bottom:6px">
+    <input id="enhMetaDesc" placeholder="Meta description" style="width:100%;margin-bottom:6px">
+    <input id="enhFaviconURL" placeholder="Favicon URL (optional)" style="width:100%;margin-bottom:6px">
+    <button class="enh-btn purple" id="enhSaveSEO" style="width:100%">SAVE SEO / TITLE</button>
+    <div id="enhSEOStatus" class="enh-status"></div>
+
+
+</div></div>
 
 
 
@@ -4042,11 +4702,3074 @@ button.js-open-cv-modal.btn{
      JAVASCRIPT
 ======================================================= -->
 
-
-
-
-
 <script>
+
+/* =========================================================
+   GLOBAL VARIABLES
+========================================================= */
+
+let editMode = false;
+
+let selectedElement = null;
+
+let connectedFileHandle = null;
+
+/* =========================================================
+   ENHANCED EDITOR CONTROLS — EDITING ONLY
+========================================================= */
+let enhSelectedExperience = null;
+let enhSelectedText = null;
+
+function enhQ(id){ return document.getElementById(id); }
+function enhSet(id,v){ const e=enhQ(id); if(e) e.value=v??""; }
+function enhText(el){ return el ? el.innerText.trim() : ""; }
+function enhExpCards(){ return [...document.querySelectorAll("#experienceGrid .exp-card")]; }
+
+
+/* Server badges helpers */
+const BADGE_SVG = {
+  verified: '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0L9.8 2.2 12.7 1.8 13.2 4.7 16 6.2 14.5 8.8 16 11.4 13.2 12.9 12.7 15.8 9.8 15.4 8 17.6 6.2 15.4 3.3 15.8 2.8 12.9 0 11.4 1.5 8.8 0 6.2 2.8 4.7 3.3 1.8 6.2 2.2z"/><path d="M7.1 10.6L4.6 8.1l1.1-1.1 1.4 1.4 3.2-3.2 1.1 1.1z" fill="#0b1020"/></svg>',
+  partner: '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2l1.8 3.6 4 .6-2.9 2.8.7 4L8 10.3 4.4 12.2l.7-4L2.2 5.4l4-.6L8 1.2z"/></svg>',
+  discoverable: '<svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="2" /><path d="M8 2v2M8 12v2M2 8h2M12 8h2" stroke="currentColor" stroke-width="1.2"/></svg>'
+};
+
+function ensureExpTitleRow(card){
+  let h3 = card.querySelector(".exp-content > h3, .exp-title-row h3");
+  if(!h3) return null;
+  let row = card.querySelector(".exp-title-row");
+  if(!row){
+    row = document.createElement("div");
+    row.className = "exp-title-row";
+    h3.parentNode.insertBefore(row, h3);
+    row.appendChild(h3);
+  }
+  let badges = row.querySelector(".server-badges");
+  if(!badges){
+    badges = document.createElement("div");
+    badges.className = "server-badges";
+    row.appendChild(badges);
+  }
+  return { row, h3, badges };
+}
+
+function renderServerBadges(card, flags){
+  const parts = ensureExpTitleRow(card);
+  if(!parts) return;
+  const { badges } = parts;
+  badges.innerHTML = "";
+  const map = [
+    ["verified", "Verified", flags.verified],
+    ["partner", "Partner", flags.partner],
+    ["discoverable", "Discoverable", flags.discoverable]
+  ];
+  map.forEach(([cls, label, on])=>{
+    if(!on) return;
+    const span = document.createElement("span");
+    span.className = "server-badge " + cls;
+    span.innerHTML = (BADGE_SVG[cls] || "") + " " + label;
+    badges.appendChild(span);
+  });
+  card.dataset.badgeVerified = flags.verified ? "1" : "0";
+  card.dataset.badgePartner = flags.partner ? "1" : "0";
+  card.dataset.badgeDiscoverable = flags.discoverable ? "1" : "0";
+}
+
+function readServerBadges(card){
+  return {
+    verified: card.dataset.badgeVerified === "1" || !!card.querySelector(".server-badge.verified"),
+    partner: card.dataset.badgePartner === "1" || !!card.querySelector(".server-badge.partner"),
+    discoverable: card.dataset.badgeDiscoverable === "1" || !!card.querySelector(".server-badge.discoverable")
+  };
+}
+
+function enhSelectExperience(card){
+    if(!card) return;
+    enhSelectedExperience = card;
+    document.querySelectorAll("#experienceGrid .exp-card.enh-card-selected").forEach(x=>x.classList.remove("enh-card-selected"));
+    document.querySelectorAll(".editor-selected").forEach(x=>x.classList.remove("editor-selected"));
+    card.classList.add("enh-card-selected");
+    card.classList.add("editor-selected");
+    const status = card.classList.contains("current-card") ? "current" : "past";
+    const bg = card.querySelector(".exp-bg");
+    let bgImage = card.dataset.bgImage || "";
+    if(!bgImage && bg){
+        const bi = bg.style.backgroundImage || "";
+        bgImage = bi.replace(/^url\(["']?/, "").replace(/["']?\)$/, "");
+    }
+    enhSet("enhExpName", enhText(card.querySelector("h3")));
+    enhSet("enhExpRole", enhText(card.querySelector(".role")));
+    enhSet("enhExpStatus", status);
+    enhSet("enhExpURL", card.dataset.link || "");
+    enhSet("enhExpDesc", enhText(card.querySelector("p")));
+    const firstBtn = card.querySelector(".visit");
+    enhLoadExpButtonFields(card);
+    enhSet("enhExpImage", bgImage || "");
+    const badges = readServerBadges(card);
+    const bv = enhQ("enhBadgeVerified"); if(bv) bv.checked = !!badges.verified;
+    const bp = enhQ("enhBadgePartner"); if(bp) bp.checked = !!badges.partner;
+    const bd = enhQ("enhBadgeDiscoverable"); if(bd) bd.checked = !!badges.discoverable;
+
+    if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent = "Selected: " + enhText(card.querySelector("h3"));
+    // Show classic experience tools too
+    if(typeof showTools === "function") showTools("experience");
+    if(typeof loadExperienceTools === "function") loadExperienceTools(card);
+    const info = document.getElementById("selectedInfo");
+    if(info) info.textContent = "Selected: EXPERIENCE • " + enhText(card.querySelector("h3"));
+}
+
+
+function enhBindExperienceSelection(){
+    enhExpCards().forEach(card=>{
+        // Always allow re-bind after export/restore; use listener flag only
+        if(card.dataset.enhExpBound === "1") return;
+        card.dataset.enhExpBound = "1";
+        card.addEventListener("click", e=>{
+            if(!editMode) return;
+            // allow clicking anywhere on card (except real links navigating)
+            if(e.target.closest("a.visit") && e.target.closest("a.visit").href && !e.target.closest("a.visit").dataset.url){
+                // still select, don't navigate in edit mode (global prevent handles links)
+            }
+            e.preventDefault();
+            e.stopPropagation();
+            enhSelectExperience(card);
+            scrollEditorToSection("experience");
+            if(typeof selectElement === "function") selectElement(card);
+        }, true);
+        card.style.cursor = "pointer";
+        card.querySelectorAll("h3,.role,p,.status,.visit").forEach(el=>{
+            el.classList.add("enh-text-target");
+        });
+    });
+}
+
+function enhApplyExperience(){
+    const card=enhSelectedExperience;
+    if(!card){ if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Select an experience/server card first."; return; }
+    const name=enhQ("enhExpName").value.trim()||"New Creator / Server";
+    const role=enhQ("enhExpRole").value.trim()||"Moderator";
+    const status=enhQ("enhExpStatus").value;
+    const url=enhQ("enhExpURL").value.trim()||"#";
+    const desc=enhQ("enhExpDesc").value.trim()||"Community / professional experience.";
+    const image=enhQ("enhExpImage").value.trim();
+    const btnText=enhQ("enhExpButtonText").value.trim()||("Visit "+name+" ↗");
+    const btnURL=enhQ("enhExpButtonURL").value.trim()||url;
+    const h=card.querySelector("h3"); if(h) h.innerText=name;
+    const r=card.querySelector(".role"); if(r) r.innerText=role;
+    const p=card.querySelector("p"); if(p) p.innerText=desc;
+    const st=card.querySelector(".status");
+    if(st){ st.className="status "+(status==="current"?"current":"former"); st.textContent=status==="current"?"CURRENT":"FORMER"; }
+    card.classList.toggle("current-card",status==="current");
+    card.classList.toggle("past-card",status!=="current");
+    card.dataset.link=url;
+    if(image){ const bg=card.querySelector(".exp-bg"); if(bg) bg.style.backgroundImage=`url("${image}")`; card.dataset.bgImage=image; }
+    // Visit buttons: use SAVE THIS BUTTON / ADD BUTTON (supports up to 3)
+    if(btnText && enhExpVisits(card).length){
+        const idx = Math.min(parseInt(enhQ("enhExpBtnPick")?.value||"0",10)||0, 2);
+        const list = enhExpVisits(card);
+        if(list[idx]){ list[idx].innerText=btnText; list[idx].dataset.url=btnURL; }
+    } else if(btnText){
+        enhEnsureVisitWrap(card);
+        const v=document.createElement("div");
+        v.className="visit magnetic"; v.dataset.editable="true"; v.dataset.type="link";
+        v.dataset.url=btnURL; v.textContent=btnText;
+        card.querySelector(".exp-visits").appendChild(v);
+    }
+    enhLoadExpButtonFields(card);
+    enhBindExperienceSelection();
+    const flags={
+      verified: !!enhQ("enhBadgeVerified")?.checked,
+      partner: !!enhQ("enhBadgePartner")?.checked,
+      discoverable: !!enhQ("enhBadgeDiscoverable")?.checked
+    };
+    renderServerBadges(card, flags);
+    saveState();
+    if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Card saved ✓";
+}
+
+function enhAddExperience(){
+    const grid=document.getElementById("experienceGrid");
+    const source=enhExpCards()[0];
+    if(!grid||!source) return;
+    const card=source.cloneNode(true);
+    card.classList.remove("current-card","past-card","enh-card-selected");
+    card.classList.add("past-card");
+    card.dataset.link="#";
+    delete card.dataset.editorReady; delete card.dataset.enhExpBound;
+    const h=card.querySelector("h3"); if(h) h.innerText="New Creator / Server";
+    const r=card.querySelector(".role"); if(r) r.innerText="Moderator";
+    const p=card.querySelector("p"); if(p) p.innerText="Add your community, creator, project or server description here.";
+    const st=card.querySelector(".status"); if(st){st.className="status former";st.textContent="FORMER";}
+    const visit=card.querySelector(".visit"); if(visit){visit.innerText="Visit Server ↗";visit.dataset.url="#";}
+    const bg=card.querySelector(".exp-bg"); if(bg){bg.style.backgroundImage="";delete card.dataset.bgImage;}
+    grid.appendChild(card);
+    enhBindExperienceSelection();
+    if(typeof attachEditorEvents==="function") attachEditorEvents();
+    enhSelectExperience(card);
+    saveState();
+}
+
+function enhDeleteExperience(){
+    const card=enhSelectedExperience;
+    if(!card) return;
+    const cards=enhExpCards();
+    if(cards.length<=1){alert("At least one experience card must remain.");return;}
+    const name=enhText(card.querySelector("h3"));
+    if(!confirm("Delete "+name+"?")) return;
+    card.remove(); enhSelectedExperience=null; saveState();
+    if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Card deleted ✓";
+}
+
+function enhMoveExperience(dir){
+    const card=enhSelectedExperience;
+    if(!card) return;
+    const sibling=dir<0?card.previousElementSibling:card.nextElementSibling;
+    if(!sibling || !sibling.classList.contains("exp-card")) return;
+    if(dir<0) sibling.before(card); else sibling.after(card);
+    saveState();
+}
+
+
+function enhExpVisits(card){
+    if(!card) return [];
+    return [...card.querySelectorAll(".visit")];
+}
+function enhEnsureVisitWrap(card){
+    let wrap = card.querySelector(".exp-visits");
+    const content = card.querySelector(".exp-content") || card;
+    const visits = enhExpVisits(card);
+    if(!wrap){
+        wrap = document.createElement("div");
+        wrap.className = "exp-visits";
+        visits.forEach(v => wrap.appendChild(v));
+        content.appendChild(wrap);
+    } else {
+        visits.forEach(v => { if(v.parentElement !== wrap) wrap.appendChild(v); });
+    }
+    return wrap;
+}
+function enhLoadExpButtonFields(card){
+    if(!card) return;
+    const visits = enhExpVisits(card);
+    const pick = enhQ("enhExpBtnPick");
+    if(pick){
+        [...pick.options].forEach((o,i)=>{
+            o.textContent = visits[i] ? ("Button " + (i+1) + ": " + (visits[i].textContent||"").trim().slice(0,24)) : ("Button " + (i+1) + " (empty)");
+            o.disabled = false;
+        });
+    }
+    const idx = Math.min(parseInt(pick?.value||"0",10)||0, 2);
+    const v = visits[idx];
+    if(v){
+        enhSet("enhExpButtonText", (v.textContent||"").trim());
+        enhSet("enhExpButtonURL", v.dataset.url || v.getAttribute("href") || "");
+    } else {
+        enhSet("enhExpButtonText", "");
+        enhSet("enhExpButtonURL", "");
+    }
+}
+function enhSaveExpButton(){
+    const card = enhSelectedExperience;
+    if(!card){ if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Select a card first."; return; }
+    const visits = enhExpVisits(card);
+    const idx = Math.min(parseInt(enhQ("enhExpBtnPick")?.value||"0",10)||0, 2);
+    const text = (enhQ("enhExpButtonText")?.value||"").trim() || ("Visit ↗");
+    const url = (enhQ("enhExpButtonURL")?.value||"").trim() || "#";
+    enhEnsureVisitWrap(card);
+    let v = visits[idx];
+    if(!v){
+        if(visits.length >= 3){
+            if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Max 3 buttons per card.";
+            return;
+        }
+        v = document.createElement("div");
+        v.className = "visit magnetic";
+        v.dataset.editable = "true";
+        v.dataset.type = "link";
+        card.querySelector(".exp-visits").appendChild(v);
+    }
+    v.textContent = text;
+    v.dataset.url = url;
+    v.dataset.editable = "true";
+    v.dataset.type = "link";
+    if(typeof attachEditorEvents==="function") attachEditorEvents();
+    if(typeof setupMagnetic==="function"){ delete v.dataset.magneticReady; setupMagnetic(); }
+    enhLoadExpButtonFields(card);
+    saveState();
+    if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Button " + (idx+1) + " saved ✓";
+}
+function enhDelExpButton(){
+    const card = enhSelectedExperience;
+    if(!card) return;
+    const visits = enhExpVisits(card);
+    const idx = Math.min(parseInt(enhQ("enhExpBtnPick")?.value||"0",10)||0, 2);
+    if(!visits[idx]){ if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="No button there."; return; }
+    if(visits.length <= 1){ if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="At least 1 button rakho."; return; }
+    visits[idx].remove();
+    enhLoadExpButtonFields(card);
+    saveState();
+    if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Button deleted";
+}
+
+
+function enhNormalizeExpVisits(){
+    document.querySelectorAll(".exp-card").forEach(card=>{
+        const visits = [...card.querySelectorAll(".visit")];
+        if(!visits.length) return;
+        let wrap = card.querySelector(".exp-visits");
+        if(!wrap){
+            wrap = document.createElement("div");
+            wrap.className = "exp-visits";
+            const content = card.querySelector(".exp-content") || card;
+            const first = visits[0];
+            first.parentElement.insertBefore(wrap, first);
+            visits.forEach(v=>wrap.appendChild(v));
+        }
+    });
+}
+
+function enhAddButtonToCard(){
+    const card=enhSelectedExperience;
+    if(!card){ if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Select a card first."; return; }
+    const visits = enhExpVisits(card);
+    if(visits.length >= 3){
+        if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Max 3 buttons (e.g. Web, Old Server, New Server).";
+        return;
+    }
+    enhEnsureVisitWrap(card);
+    const a=document.createElement("div");
+    a.className="visit magnetic";
+    a.dataset.editable="true";
+    a.dataset.type="link";
+    a.dataset.url = card.dataset.link || "#";
+    a.textContent = visits.length===0 ? "Visit Web ↗" : (visits.length===1 ? "Visit Old Server ↗" : "Visit New Server ↗");
+    card.querySelector(".exp-visits").appendChild(a);
+    const pick = enhQ("enhExpBtnPick");
+    if(pick) pick.value = String(visits.length); // new index
+    if(typeof attachEditorEvents==="function") attachEditorEvents();
+    if(typeof setupMagnetic==="function"){ delete a.dataset.magneticReady; setupMagnetic(); }
+    enhBindExperienceSelection();
+    enhLoadExpButtonFields(card);
+    saveState();
+    if(enhQ("enhExpStatusMsg")) enhQ("enhExpStatusMsg").textContent="Button added — edit text/URL then SAVE THIS BUTTON";
+}
+
+
+
+let enhSelectedSkill = null;
+
+function enhSkillCards(){ return [...document.querySelectorAll("#skills .skill-card")]; }
+
+function enhSelectSkill(card){
+    if(!card || !editMode) return;
+    enhSelectedSkill=card;
+    document.querySelectorAll("#skills .skill-card.enh-skill-selected").forEach(x=>x.classList.remove("enh-skill-selected"));
+    card.classList.add("enh-skill-selected");
+    const h=card.querySelector("h3");
+    const p=card.querySelector("p");
+    const icon=card.querySelector(".skill-icon");
+    const learning=card.querySelector(".skill-learning");
+    const tag=card.querySelector(".tags span");
+    enhSet("enhSkillName",enhText(h));
+    enhSet("enhSkillIcon",enhText(icon));
+    enhSet("enhSkillDesc",enhText(p));
+    enhSet("enhSkillLearning",learning ? "learning" : "none");
+    enhSet("enhSkillTag",tag ? enhText(tag) : "");
+    if(enhQ("enhSkillStatus")) enhQ("enhSkillStatus").textContent="Selected skill: "+enhText(h);
+
+    const lvl = card.querySelector(".skill-level");
+    let lv = "";
+    if(lvl){
+        if(lvl.classList.contains("advanced")) lv = "advanced";
+        else if(lvl.classList.contains("intermediate")) lv = "intermediate";
+        else if(lvl.classList.contains("beginner")) lv = "beginner";
+    }
+    enhSet("enhSkillLevel", lv);
+
+}
+
+function enhBindSkillSelection(){
+    enhSkillCards().forEach(card=>{
+        if(card.dataset.enhSkillBound) return;
+        card.dataset.enhSkillBound="1";
+        card.addEventListener("click",e=>{
+            if(!editMode) return;
+            if(e.target.closest("a,button,input,select,textarea")) return;
+            e.preventDefault();
+            e.stopPropagation();
+            enhSelectSkill(card);
+            scrollEditorToSection("skill");
+            if(typeof selectElement==="function") selectElement(card);
+        },true);
+    });
+}
+
+function enhApplySkill(){
+    const card=enhSelectedSkill;
+    if(!card){ if(enhQ("enhSkillStatus")) enhQ("enhSkillStatus").textContent="Select a skill card first."; return; }
+    const name=enhQ("enhSkillName").value.trim()||"New Skill";
+    const icon=enhQ("enhSkillIcon").value.trim()||"✦";
+    const desc=enhQ("enhSkillDesc").value.trim()||"Add your skill description here.";
+    const learning=enhQ("enhSkillLearning").value==="learning";
+    const tag=enhQ("enhSkillTag").value.trim();
+    const h=card.querySelector("h3"); if(h) h.innerText=name;
+    const p=card.querySelector("p"); if(p) p.innerText=desc;
+    const ic=card.querySelector(".skill-icon"); if(ic) ic.innerText=icon;
+    const old=card.querySelector(".skill-learning"); if(old) old.remove();
+    if(learning){
+        const span=document.createElement("span"); span.className="skill-learning"; span.innerText="Currently Learning"; card.prepend(span);
+    }
+    let tags=card.querySelector(".tags");
+    if(tag){
+        if(!tags){ tags=document.createElement("div"); tags.className="tags"; card.appendChild(tags); }
+        let t=tags.querySelector("span"); if(!t){t=document.createElement("span");tags.appendChild(t);}
+        t.innerText=tag;
+        t.dataset.editable="true"; t.dataset.type="text";
+    }
+    if(typeof attachEditorEvents==="function") attachEditorEvents();
+    enhBindSkillSelection();
+    
+    const level = (enhQ("enhSkillLevel")?.value || "").trim();
+    card.querySelectorAll(".skill-level").forEach(x=>x.remove());
+    if(level){
+        const badge = document.createElement("div");
+        badge.className = "skill-level " + level;
+        badge.textContent = level.toUpperCase();
+        const tags = card.querySelector(".tags");
+        if(tags) tags.parentNode.insertBefore(badge, tags);
+        else card.appendChild(badge);
+    }
+
+    saveState();
+    if(enhQ("enhSkillStatus")) enhQ("enhSkillStatus").textContent="Skill saved ✓";
+}
+
+function enhAddSkill(){
+    const grid=document.querySelector("#skills .skills-grid");
+    const source=enhSkillCards()[0];
+    if(!grid || !source) return;
+    const card=source.cloneNode(true);
+    card.classList.remove("enh-skill-selected");
+    delete card.dataset.editorReady; delete card.dataset.enhSkillBound;
+    const h=card.querySelector("h3"); if(h) h.innerText="New Skill";
+    const p=card.querySelector("p"); if(p) p.innerText="Add your skill description here.";
+    const ic=card.querySelector(".skill-icon"); if(ic) ic.innerText="✦";
+    card.querySelectorAll(".skill-learning").forEach(x=>x.remove());
+    const tags=card.querySelector(".tags"); if(tags) tags.innerHTML="";
+    grid.appendChild(card);
+    enhBindSkillSelection();
+    if(typeof attachEditorEvents==="function") attachEditorEvents();
+    enhSelectSkill(card);
+    saveState();
+}
+
+function enhDeleteSkill(){
+    const card=enhSelectedSkill;
+    const cards=enhSkillCards();
+    if(!card || cards.length<=1) return;
+    if(!confirm("Delete "+enhText(card.querySelector("h3"))+"?")) return;
+    card.remove(); enhSelectedSkill=null; saveState();
+    if(enhQ("enhSkillStatus")) enhQ("enhSkillStatus").textContent="Skill deleted ✓";
+}
+
+function enhMoveSkill(dir){
+    const card=enhSelectedSkill;
+    if(!card) return;
+    const sibling=dir<0?card.previousElementSibling:card.nextElementSibling;
+    if(!sibling || !sibling.classList.contains("skill-card")) return;
+    dir<0?sibling.before(card):sibling.after(card);
+    saveState();
+}
+
+function enhAddSkillTag(){
+    const card=enhSelectedSkill;
+    if(!card) return;
+    let tags=card.querySelector(".tags");
+    if(!tags){ tags=document.createElement("div"); tags.className="tags"; card.appendChild(tags); }
+    const t=document.createElement("span");
+    t.innerText=prompt("Tag text:","New Tag")||"New Tag";
+    t.dataset.editable="true"; t.dataset.type="text";
+    tags.appendChild(t);
+    if(typeof attachEditorEvents==="function") attachEditorEvents();
+    saveState();
+}
+
+function enhSelectText(el){
+    if(!editMode || !el) return;
+    if(enhSelectedText) enhSelectedText.classList.remove("enh-text-selected");
+    enhSelectedText=el; enhSelectedText.classList.add("enh-text-selected");
+    const cs=getComputedStyle(el);
+    enhSet("enhFontSize",parseInt(cs.fontSize)||"");
+    const color=cs.color.match(/\\d+/g); if(color && color.length>=3){ enhQ("enhTextColor").value="#"+color.slice(0,3).map(x=>Number(x).toString(16).padStart(2,"0")).join(""); }
+    if(enhQ("enhTextStatus")) enhQ("enhTextStatus").textContent="Selected text: "+enhText(el).slice(0,40);
+}
+
+function enhBindTextTargets(){
+    const targets=document.querySelectorAll(".hero h1, .hero h2, .hero p, .title h2, .title p, .card h3, .card p, .stat h3, .stat p, .skill-card h3, .skill-card p, .skill-card .tags span, footer, .about-card h3, .about-card p");
+    targets.forEach(el=>{
+        if(el.closest("#editPanel")) return;
+        if(el.dataset.enhTextBound) return;
+        el.dataset.enhTextBound="1"; el.classList.add("enh-text-target");
+        el.addEventListener("click",e=>{
+            if(!editMode) return;
+            // Experience card itself remains selectable, while inner text is style-selectable.
+            if(el.classList.contains("exp-card")) return;
+            e.stopPropagation(); enhSelectText(el);
+        },true);
+    });
+}
+
+
+function enhBindFreedomControls(){
+    enhBindExperienceSelection();
+    enhBindSkillSelection();
+    if(!window.__enhOnceBound) window.__enhOnceBound = new Set();
+    const bind=(id,fn)=>{const el=enhQ(id); if(!el) return; if(window.__enhOnceBound.has(id)) return; window.__enhOnceBound.add(id); el.addEventListener("click",fn);};
+    bind("enhSaveExperience",enhApplyExperience);
+    bind("enhAddExperience",enhAddExperience);
+    bind("enhDeleteExperience",enhDeleteExperience);
+    bind("enhMoveExperienceUp",()=>enhMoveExperience(-1));
+    bind("enhMoveExperienceDown",()=>enhMoveExperience(1));
+    bind("enhAddCardButton",enhAddButtonToCard);
+    bind("enhSaveSkill",enhApplySkill);
+    bind("enhAddSkill",enhAddSkill);
+    bind("enhDeleteSkill",enhDeleteSkill);
+    bind("enhMoveSkillUp",()=>enhMoveSkill(-1));
+    bind("enhMoveSkillDown",()=>enhMoveSkill(1));
+    bind("enhAddSkillTag",enhAddSkillTag);
+}
+
+function enhApplyTextStyle(){
+    if(!enhSelectedText){if(enhQ("enhTextStatus"))enhQ("enhTextStatus").textContent="Select text first.";return;}
+    const size=enhQ("enhFontSize").value;
+    if(size) enhSelectedText.style.fontSize=Math.max(8,Math.min(180,Number(size)))+"px";
+    const blend=enhQ("enhTextBlend").value;
+    const map={muted:"var(--muted)",white:"#f7f7fb",green:"var(--green2)",blue:"var(--blue)",purple:"var(--purple)",cyan:"var(--cyan)"};
+    if(blend==="original"){
+        enhSelectedText.style.removeProperty("color");
+        enhSelectedText.style.removeProperty("-webkit-background-clip");
+        enhSelectedText.style.removeProperty("background-clip");
+        enhSelectedText.style.removeProperty("background");
+        enhSelectedText.style.removeProperty("-webkit-text-fill-color");
+    }else if(blend==="custom"){
+        enhSelectedText.style.color=enhQ("enhTextColor").value;
+        enhSelectedText.style.removeProperty("background");
+        enhSelectedText.style.removeProperty("-webkit-background-clip");
+        enhSelectedText.style.removeProperty("background-clip");
+        enhSelectedText.style.removeProperty("-webkit-text-fill-color");
+    }else{
+        enhSelectedText.style.color=map[blend]||"#f7f7fb";
+        enhSelectedText.style.removeProperty("background");
+        enhSelectedText.style.removeProperty("-webkit-background-clip");
+        enhSelectedText.style.removeProperty("background-clip");
+        enhSelectedText.style.removeProperty("-webkit-text-fill-color");
+    }
+    saveState(); if(enhQ("enhTextStatus"))enhQ("enhTextStatus").textContent="Text style applied ✓";
+}
+function enhResetTextStyle(){if(!enhSelectedText)return;enhSelectedText.removeAttribute("style");saveState();if(enhQ("enhTextStatus"))enhQ("enhTextStatus").textContent="Text style reset ✓";}
+
+
+/* Individual experience buttons open their own URL without changing card behaviour. */
+document.addEventListener("click",e=>{
+    if(editMode) return;
+    const btn=e.target.closest(".exp-card .visit[data-url]");
+    if(!btn) return;
+    const url=btn.dataset.url;
+    if(url && url!=="#"){
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        window.open(url,"_blank","noopener,noreferrer");
+    }
+},true);
+
+function initEnhancedEditor(){
+    const enh=document.getElementById("enhancedEditorTools");
+    const panel=document.getElementById("editPanel");
+    if(enh && panel && enh.parentElement !== panel) panel.appendChild(enh);
+    // Never let persisted data-bound block buttons after admin save
+    document.querySelectorAll("#editPanel [data-bound], #enhancedEditorTools [data-bound]").forEach(el=>delete el.dataset.bound);
+
+    // Core experience / text (idempotent via optional chaining + dataset.bound in freedom)
+    if(!window.__enhOnceBound) window.__enhOnceBound = new Set();
+    const once=(id,fn)=>{ const el=enhQ(id); if(!el) return; if(window.__enhOnceBound.has(id)) return; window.__enhOnceBound.add(id); el.addEventListener("click",fn); };
+
+    once("enhAddExperience", enhAddExperience);
+    once("enhDeleteExperience", enhDeleteExperience);
+    once("enhMoveExperienceUp", ()=>enhMoveExperience(-1));
+    once("enhMoveExperienceDown", ()=>enhMoveExperience(1));
+    once("enhSaveExperience", enhApplyExperience);
+    once("enhAddCardButton", enhAddButtonToCard);
+    once("enhSaveExpButton", enhSaveExpButton);
+    once("enhDelExpButton", enhDelExpButton);
+    (function(){
+        const pick = enhQ("enhExpBtnPick");
+        if(pick && !pick.dataset.boundPick){
+            pick.dataset.boundPick = "1";
+            pick.addEventListener("change", ()=>enhLoadExpButtonFields(enhSelectedExperience));
+        }
+    })();
+    once("enhApplyTextStyle", enhApplyTextStyle);
+    once("enhResetTextStyle", enhResetTextStyle);
+
+    // Skills + freedom controls (BUG FIX — was missing on load)
+    if(typeof enhBindFreedomControls === "function") enhBindFreedomControls();
+    if(typeof enhBindSkillSelection === "function") enhBindSkillSelection();
+    if(typeof enhBindExperienceSelection === "function") enhBindExperienceSelection();
+    if(typeof enhBindTextTargets === "function") enhBindTextTargets();
+
+    // Stats
+    once("enhSaveStats", ()=>{
+        const stats = document.querySelectorAll(".stats .stat");
+        stats.forEach((st,i)=>{
+            const num = enhQ("enhStat"+i+"Num");
+            const lab = enhQ("enhStat"+i+"Label");
+            if(!num) return;
+            const strong = st.querySelector("strong");
+            const span = st.querySelector("span");
+            if(strong && num.value.trim()) strong.innerText = num.value.trim();
+            if(span && lab && lab.value.trim()) span.innerText = lab.value.trim();
+        });
+        saveState();
+        if(enhQ("enhStatStatus")) enhQ("enhStatStatus").textContent = "Stats saved ✓";
+    });
+    // load stats into fields
+    document.querySelectorAll(".stats .stat").forEach((st,i)=>{
+        const strong = st.querySelector("strong");
+        const span = st.querySelector("span");
+        if(strong) enhSet("enhStat"+i+"Num", strong.innerText.trim());
+        if(span) enhSet("enhStat"+i+"Label", span.innerText.trim());
+    });
+
+    // About cards
+    const aboutCards = ()=>[...document.querySelectorAll(".about-grid .card")];
+    const loadAbout = ()=>{
+        const i = parseInt(enhQ("enhAboutPick")?.value||"0",10);
+        const card = aboutCards()[i];
+        if(!card) return;
+        enhSet("enhAboutTitle", enhText(card.querySelector("h3")));
+        enhSet("enhAboutBody", enhText(card.querySelector("p")));
+    };
+    enhQ("enhAboutPick")?.addEventListener("change", loadAbout);
+    loadAbout();
+    once("enhSaveAbout", ()=>{
+        const i = parseInt(enhQ("enhAboutPick")?.value||"0",10);
+        const card = aboutCards()[i];
+        if(!card) return;
+        const h = card.querySelector("h3");
+        const p = card.querySelector("p");
+        if(h) h.innerText = enhQ("enhAboutTitle").value;
+        if(p) p.innerText = enhQ("enhAboutBody").value;
+        saveState();
+        if(enhQ("enhAboutStatus")) enhQ("enhAboutStatus").textContent = "About card "+(i+1)+" saved ✓";
+    });
+
+    // Undo / Redo
+    once("enhUndo", undoEdit);
+    once("enhRedo", redoEdit);
+
+    // Backup
+    once("enhRestoreBackup", restoreBackup);
+    once("enhClearBackup", clearBackup);
+    once("enhPreviewPublic", ()=>{
+        try{
+            const html = getExportHTML("public");
+            const blob = new Blob([html], {type:"text/html"});
+            const url = URL.createObjectURL(blob);
+            window.open(url, "_blank");
+            setTimeout(()=>URL.revokeObjectURL(url), 60000);
+        }catch(e){ alert("Preview failed: "+e.message); }
+    });
+
+    // Themes
+    const themes = {
+        default:{ "--purple":"#8b5cf6","--violet":"#a855f7","--cyan":"#22d3ee","--blue":"#3b82f6","--green":"#22c55e","--green2":"#4ade80" },
+        ocean:{ "--purple":"#0ea5e9","--violet":"#06b6d4","--cyan":"#67e8f9","--blue":"#0284c7","--green":"#14b8a6","--green2":"#2dd4bf" },
+        forest:{ "--purple":"#22c55e","--violet":"#16a34a","--cyan":"#86efac","--blue":"#15803d","--green":"#4ade80","--green2":"#bbf7d0" },
+        sunset:{ "--purple":"#f97316","--violet":"#ef4444","--cyan":"#fbbf24","--blue":"#e11d48","--green":"#fb923c","--green2":"#fdba74" },
+        mono:{ "--purple":"#a1a1aa","--violet":"#d4d4d8","--cyan":"#e4e4e7","--blue":"#71717a","--green":"#a3a3a3","--green2":"#fafafa" }
+    };
+    const applyTheme = (name)=>{
+        const th = themes[name]||themes.default;
+        const root = document.documentElement;
+        Object.entries(th).forEach(([k,v])=>root.style.setProperty(k,v));
+        saveState();
+    };
+    once("enhThemeDefault", ()=>applyTheme("default"));
+    once("enhThemeOcean", ()=>applyTheme("ocean"));
+    once("enhThemeForest", ()=>applyTheme("forest"));
+    once("enhThemeSunset", ()=>applyTheme("sunset"));
+    once("enhThemeMono", ()=>applyTheme("mono"));
+
+    // Sections show/hide
+    const secMap = { enhSecAbout:"#about", enhSecExperience:"#experience", enhSecSkills:"#skills", enhSecContact:"#contact" };
+    Object.entries(secMap).forEach(([id, sel])=>{
+        const el = document.querySelector(sel);
+        const cb = enhQ(id);
+        if(el && cb) cb.checked = el.style.display !== "none";
+    });
+    once("enhApplySections", ()=>{
+        Object.entries(secMap).forEach(([id, sel])=>{
+            const el = document.querySelector(sel);
+            const cb = enhQ(id);
+            if(el && cb) el.style.display = cb.checked ? "" : "none";
+        });
+        saveState();
+    });
+
+    // SEO
+    enhSet("enhPageTitle", document.title||"");
+    const meta = document.querySelector('meta[name="description"]');
+    if(meta) enhSet("enhMetaDesc", meta.getAttribute("content")||"");
+    once("enhSaveSEO", ()=>{
+        const title = enhQ("enhPageTitle")?.value?.trim();
+        const desc = enhQ("enhMetaDesc")?.value?.trim();
+        const fav = enhQ("enhFaviconURL")?.value?.trim();
+        if(title) document.title = title;
+        let m = document.querySelector('meta[name="description"]');
+        if(!m){ m=document.createElement("meta"); m.setAttribute("name","description"); document.head.appendChild(m); }
+        if(desc) m.setAttribute("content", desc);
+        if(fav){
+            let link = document.querySelector('link[rel="icon"]');
+            if(!link){ link=document.createElement("link"); link.rel="icon"; document.head.appendChild(link); }
+            link.href = fav;
+        }
+        saveState();
+        if(enhQ("enhSEOStatus")) enhQ("enhSEOStatus").textContent = "SEO / title saved ✓";
+    });
+    
+    once("enhContactSave", enhSaveContactBtn);
+    once("enhContactAdd", enhAddContactBtn);
+    once("enhContactUp", ()=>enhMoveContact(-1));
+    once("enhContactDown", ()=>enhMoveContact(1));
+    once("enhContactDelete", enhDeleteContactBtn);
+    enhBindContactSelection();
+
+    once("enhAddHighlight", enhAddHighlight);
+    once("enhClearHighlights", enhClearHighlights);
+
+
+    tryRestoreOnLoad();
+}
+
+
+
+
+
+/* =========================================================
+   CURSOR LIGHT
+========================================================= */
+
+const cursorLight =
+    document.querySelector(".cursor-light");
+
+
+document.addEventListener(
+    "mousemove",
+    e => {
+
+        if(!cursorLight)
+            return;
+
+        cursorLight.style.left =
+            e.clientX + "px";
+
+        cursorLight.style.top =
+            e.clientY + "px";
+
+    }
+);
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target
+                            .classList
+                            .add("show");
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:.1
+        }
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(
+        el =>
+            observer.observe(el)
+    );
+
+
+/* =========================================================
+   MAGNETIC SYSTEM
+========================================================= */
+
+function setupMagnetic(){
+
+    const elements =
+        document.querySelectorAll(`
+            .magnetic,
+            nav a,
+            .nav-btn,
+            .btn,
+            .visit,
+            .tags span,
+            .skill-card,
+            .stat,
+            .card,
+            .orbit-label,
+            .contact-links a, .contact-links button
+        `);
+
+
+    elements.forEach(
+        element => {
+
+            if(
+                element.dataset.magneticReady
+            )
+                return;
+
+
+            element.dataset.magneticReady =
+                "1";
+
+
+            element.addEventListener(
+                "mousemove",
+                e => {
+
+                    if(editMode)
+                        return;
+
+
+                    const rect =
+                        element.getBoundingClientRect();
+
+
+                    const centerX =
+                        rect.left +
+                        rect.width / 2;
+
+
+                    const centerY =
+                        rect.top +
+                        rect.height / 2;
+
+
+                    let strength = .14;
+
+
+                    /*
+                        NAV
+                    */
+
+                    if(
+                        element.matches("nav a")
+                    ){
+
+                        strength = .22;
+
+                    }
+
+
+                    /*
+                        BUTTON
+                    */
+
+                    if(
+                        element.classList.contains(
+                            "btn"
+                        )
+                    ){
+
+                        strength = .18;
+
+                    }
+
+
+                    /*
+                        SKILL CARD
+                    */
+
+                    if(
+                        element.classList.contains(
+                            "skill-card"
+                        )
+                    ){
+
+                        strength = .055;
+
+                    }
+
+
+                    /*
+                        TAG
+                    */
+
+                    if(
+                        element.matches(
+                            ".tags span"
+                        )
+                    ){
+
+                        strength = .13;
+
+                    }
+
+
+                    /*
+                        CARD
+                    */
+
+                    if(
+                        element.classList.contains(
+                            "card"
+                        )
+                    ){
+
+                        strength = .07;
+
+                    }
+
+
+                    /*
+                        MAGNETIC MOVEMENT
+                    */
+
+                    const moveX =
+                        (
+                            e.clientX -
+                            centerX
+                        ) * strength;
+
+
+                    const moveY =
+                        (
+                            e.clientY -
+                            centerY
+                        ) * strength;
+
+
+                    /*
+                        MOUSE POSITION
+                    */
+
+                    const mouseX =
+                        e.clientX -
+                        rect.left;
+
+
+                    const mouseY =
+                        e.clientY -
+                        rect.top;
+
+
+                    element.style.setProperty(
+                        "--mx",
+                        mouseX + "px"
+                    );
+
+
+                    element.style.setProperty(
+                        "--my",
+                        mouseY + "px"
+                    );
+
+
+                    /*
+                        SKILL 3D
+                    */
+
+                    if(
+                        element.classList.contains(
+                            "skill-card"
+                        )
+                    ){
+
+                        const percentX =
+                            (
+                                e.clientX -
+                                rect.left
+                            ) /
+                            rect.width -
+                            .5;
+
+
+                        const percentY =
+                            (
+                                e.clientY -
+                                rect.top
+                            ) /
+                            rect.height -
+                            .5;
+
+
+                        element.style.transform = `
+
+                            perspective(900px)
+
+                            translate(
+                                ${moveX}px,
+                                ${moveY}px
+                            )
+
+                            rotateX(
+                                ${percentY * -5}deg
+                            )
+
+                            rotateY(
+                                ${percentX * 7}deg
+                            )
+
+                            translateZ(5px)
+
+                            scale(1.025)
+
+                        `;
+
+                    }
+
+                    else{
+
+                        element.style.transform = `
+                            translate(
+                                ${moveX}px,
+                                ${moveY}px
+                            )
+                        `;
+
+                    }
+
+                }
+            );
+
+
+            element.addEventListener(
+                "mouseleave",
+                () => {
+
+                    element.style.transform =
+                        "";
+
+                    element.style.setProperty(
+                        "--mx",
+                        "50%"
+                    );
+
+                    element.style.setProperty(
+                        "--my",
+                        "50%"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   EXPERIENCE 3D TILT
+========================================================= */
+
+function setupTilt(){
+
+    document
+        .querySelectorAll(".tilt")
+        .forEach(
+            card => {
+
+                if(
+                    card.dataset.tiltReady
+                )
+                    return;
+
+
+                card.dataset.tiltReady =
+                    "1";
+
+
+                card.addEventListener(
+                    "mousemove",
+                    e => {
+
+                        if(editMode)
+                            return;
+
+
+                        const r =
+                            card.getBoundingClientRect();
+
+
+                        const x =
+                            (
+                                e.clientX -
+                                r.left
+                            ) /
+                            r.width -
+                            .5;
+
+
+                        const y =
+                            (
+                                e.clientY -
+                                r.top
+                            ) /
+                            r.height -
+                            .5;
+
+
+                        card.style.setProperty(
+                            "--mx",
+                            (
+                                e.clientX -
+                                r.left
+                            ) + "px"
+                        );
+
+
+                        card.style.setProperty(
+                            "--my",
+                            (
+                                e.clientY -
+                                r.top
+                            ) + "px"
+                        );
+
+
+                        card.style.transform = `
+
+                            perspective(900px)
+
+                            translate(
+                                ${x * 5}px,
+                                ${y * 5}px
+                            )
+
+                            rotateX(
+                                ${y * -6}deg
+                            )
+
+                            rotateY(
+                                ${x * 8}deg
+                            )
+
+                            scale(1.015)
+
+                        `;
+
+                    }
+                );
+
+
+                card.addEventListener(
+                    "mouseleave",
+                    () => {
+
+                        card.style.transform =
+                            "";
+
+                        card.style.setProperty(
+                            "--mx",
+                            "50%"
+                        );
+
+                        card.style.setProperty(
+                            "--my",
+                            "50%"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+/* =========================================================
+   EDIT MODE
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    e => {
+
+        if(e.altKey && e.shiftKey && e.key.toLowerCase() === "l"){
+            e.preventDefault();
+            const choice=prompt("SAVE AS:\n\n1 = Public File (website only, no admin shortcuts)\n2 = Admin File (full editor + shortcuts)");
+            if(choice==="1") downloadHTMLFile(getExportHTML("public"),"index-public.html");
+            if(choice==="2") downloadHTMLFile(getExportHTML("admin"),"index-admin.html");
+            return;
+        }
+
+        if(e.altKey && e.shiftKey && e.key.toLowerCase() === "s"){
+            e.preventDefault();
+            downloadHTMLFile(getExportHTML("admin"),"index-admin.html");
+            return;
+        }
+
+        if(
+            e.altKey &&
+            e.shiftKey &&
+            e.key.toLowerCase() === "m"
+        ){
+
+            e.preventDefault();
+
+            editMode =
+                !editMode;
+
+
+            document.body
+                .classList
+                .toggle(
+                    "edit-mode",
+                    editMode
+                );
+
+
+            if(!editMode){
+
+                clearSelection();
+                window.__lastEditorSection = null;
+
+            }
+
+        }
+
+        // Undo / Redo shortcuts
+        if(editMode && (e.ctrlKey || e.metaKey) && e.key.toLowerCase()==="z" && !e.shiftKey){
+            e.preventDefault();
+            undoEdit();
+        }
+        if(editMode && (e.ctrlKey || e.metaKey) && (e.key.toLowerCase()==="y" || (e.shiftKey && e.key.toLowerCase()==="z"))){
+            e.preventDefault();
+            redoEdit();
+        }
+
+    }
+);
+
+
+/* =========================================================
+   EDIT EVENTS
+========================================================= */
+
+function attachEditorEvents(){
+
+    document
+        .querySelectorAll(
+            "[data-editable]"
+        )
+        .forEach(
+            element => {
+
+                if(
+                    element.dataset.editorReady
+                )
+                    return;
+
+
+                element.dataset.editorReady =
+                    "1";
+
+
+                element.addEventListener(
+                    "click",
+                    e => {
+
+                        if(!editMode)
+                            return;
+
+
+                        e.preventDefault();
+
+                        e.stopPropagation();
+
+
+                        selectElement(
+                            element
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+    setupMagnetic();
+
+    setupTilt();
+
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+function selectElement(element){
+
+    clearSelection(false);
+
+    selectedElement =
+        element;
+
+    element.classList.add(
+        "editor-selected"
+    );
+
+
+    document
+        .getElementById(
+            "selectedInfo"
+        )
+        .textContent =
+        "Selected: " +
+        element.tagName +
+        " • " +
+        (
+            element.dataset.type ||
+            "element"
+        );
+
+
+    showTools(
+        element.dataset.type
+    );
+
+
+    if(
+        element.dataset.type === "text"
+    ){
+
+        loadTextTools(
+            element
+        );
+
+    }
+
+
+    if(
+        element.dataset.type === "link"
+    ){
+
+        loadLinkTools(
+            element
+        );
+
+    }
+
+
+    if(
+        element.dataset.type === "image"
+    ){
+
+        loadImageTools(
+            element
+        );
+
+    }
+
+
+    if(
+        element.dataset.type === "experience"
+    ){
+
+        loadExperienceTools(
+            element
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   CLEAR
+========================================================= */
+
+function clearSelection(
+    resetInfo=true
+){
+
+    document
+        .querySelectorAll(
+            ".editor-selected"
+        )
+        .forEach(
+            el =>
+                el.classList.remove(
+                    "editor-selected"
+                )
+        );
+
+
+    selectedElement =
+        null;
+
+
+    if(resetInfo){
+
+        document
+            .getElementById(
+                "selectedInfo"
+            )
+            .textContent =
+            "Nothing selected";
+
+    }
+
+}
+
+
+/* =========================================================
+   TOOLS
+========================================================= */
+
+function showTools(type){
+
+    document
+        .getElementById(
+            "textTools"
+        )
+        .style.display =
+        type === "text"
+        ? "block"
+        : "none";
+
+
+    document
+        .getElementById(
+            "linkTools"
+        )
+        .style.display =
+        type === "link"
+        ? "block"
+        : "none";
+
+
+    document
+        .getElementById(
+            "imageTools"
+        )
+        .style.display =
+        type === "image"
+        ? "block"
+        : "none";
+
+
+    document
+        .getElementById(
+            "experienceTools"
+        )
+        .style.display =
+        type === "experience"
+        ? "block"
+        : "none";
+
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+function loadTextTools(element){
+
+    document
+        .getElementById(
+            "textContent"
+        )
+        .value =
+        element.innerText.trim();
+
+}
+
+
+document
+    .getElementById(
+        "applyText"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(!selectedElement)
+                return;
+
+
+            if(
+                selectedElement.dataset.type !==
+                "text"
+            )
+                return;
+
+
+            selectedElement.innerText =
+                document
+                    .getElementById(
+                        "textContent"
+                    )
+                    .value;
+
+
+            saveState();
+
+        }
+    );
+
+
+/* =========================================================
+   GRADIENT
+========================================================= */
+
+document
+    .getElementById(
+        "applyGradient"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(
+                !selectedElement ||
+                selectedElement.dataset.type !==
+                "text"
+            ){
+
+                alert(
+                    "Pehle text element select karo."
+                );
+
+                return;
+
+            }
+
+
+            const selection =
+                window.getSelection();
+
+
+            if(
+                !selection ||
+                selection.rangeCount === 0 ||
+                !selection.toString().trim()
+            ){
+
+                alert(
+                    "Website par exact text select karo."
+                );
+
+                return;
+
+            }
+
+
+            const range =
+                selection.getRangeAt(0);
+
+
+            if(
+                !selectedElement.contains(
+                    range.commonAncestorContainer
+                )
+            ){
+
+                alert(
+                    "Selected text isi element ke andar hona chahiye."
+                );
+
+                return;
+
+            }
+
+
+            const start =
+                document
+                    .getElementById(
+                        "gradientStart"
+                    )
+                    .value;
+
+
+            const end =
+                document
+                    .getElementById(
+                        "gradientEnd"
+                    )
+                    .value;
+
+
+            const span =
+                document.createElement(
+                    "span"
+                );
+
+
+            span.style.background =
+                `linear-gradient(
+                    90deg,
+                    ${start},
+                    ${end}
+                )`;
+
+
+            span.style.webkitBackgroundClip =
+                "text";
+
+
+            span.style.backgroundClip =
+                "text";
+
+
+            span.style.color =
+                "transparent";
+
+
+            span.style.backgroundSize =
+                "100% 100%";
+
+
+            try{
+
+                range.surroundContents(
+                    span
+                );
+
+            }
+
+            catch{
+
+                const fragment =
+                    range.extractContents();
+
+
+                span.appendChild(
+                    fragment
+                );
+
+
+                range.insertNode(
+                    span
+                );
+
+            }
+
+
+            selection.removeAllRanges();
+
+            saveState();
+
+        }
+    );
+
+
+/* =========================================================
+   REMOVE GRADIENT
+========================================================= */
+
+document
+    .getElementById(
+        "removeGradient"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(!selectedElement)
+                return;
+
+
+            selectedElement
+                .querySelectorAll("span")
+                .forEach(
+                    span => {
+
+                        const text =
+                            document.createTextNode(
+                                span.textContent
+                            );
+
+
+                        span.replaceWith(
+                            text
+                        );
+
+                    }
+                );
+
+
+            saveState();
+
+        }
+    );
+
+
+/* =========================================================
+   GRADIENT PREVIEW
+========================================================= */
+
+function updateGradient(){
+
+    const a =
+        document
+            .getElementById(
+                "gradientStart"
+            )
+            .value;
+
+
+    const b =
+        document
+            .getElementById(
+                "gradientEnd"
+            )
+            .value;
+
+
+    document
+        .getElementById(
+            "gradientPreview"
+        )
+        .style.background =
+        `linear-gradient(
+            90deg,
+            ${a},
+            ${b}
+        )`;
+
+}
+
+
+document
+    .getElementById(
+        "gradientStart"
+    )
+    .addEventListener(
+        "input",
+        updateGradient
+    );
+
+
+document
+    .getElementById(
+        "gradientEnd"
+    )
+    .addEventListener(
+        "input",
+        updateGradient
+    );
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+function loadLinkTools(element){
+
+    document
+        .getElementById(
+            "linkText"
+        )
+        .value =
+        element.innerText.trim();
+
+
+    document
+        .getElementById(
+            "linkURL"
+        )
+        .value =
+        element.getAttribute(
+            "href"
+        ) || "";
+
+
+    document
+        .getElementById(
+            "buttonImageURL"
+        )
+        .value =
+        element.dataset.bgImage ||
+        "";
+
+
+    updateOrderInfo();
+
+}
+
+
+document
+    .getElementById(
+        "saveLink"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(
+                !selectedElement ||
+                selectedElement.dataset.type !==
+                "link"
+            )
+                return;
+
+
+            const text =
+                document
+                    .getElementById(
+                        "linkText"
+                    )
+                    .value;
+
+
+            const url =
+                document
+                    .getElementById(
+                        "linkURL"
+                    )
+                    .value;
+
+
+            const image =
+                document
+                    .getElementById(
+                        "buttonImageURL"
+                    )
+                    .value;
+
+
+            selectedElement.innerText =
+                text;
+
+
+            selectedElement.href =
+                url;
+
+
+            if(image){
+
+                setButtonBackground(
+                    selectedElement,
+                    image
+                );
+
+
+                selectedElement.dataset.bgImage =
+                    image;
+
+            }
+
+
+            saveState();
+
+        }
+    );
+
+
+/* =========================================================
+   BUTTON IMAGE
+========================================================= */
+
+document
+    .getElementById(
+        "buttonImageFile"
+    )
+    .addEventListener(
+        "change",
+        function(){
+
+            if(!selectedElement)
+                return;
+
+
+            const file =
+                this.files[0];
+
+
+            if(!file)
+                return;
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                e => {
+
+                    setButtonBackground(
+                        selectedElement,
+                        e.target.result
+                    );
+
+
+                    selectedElement.dataset.bgImage =
+                        e.target.result;
+
+
+                    saveState();
+
+                };
+
+
+            reader.readAsDataURL(
+                file
+            );
+
+        }
+    );
+
+
+function setButtonBackground(
+    element,
+    url
+){
+
+    element.style.backgroundImage =
+        `
+        linear-gradient(
+            rgba(5,6,10,.35),
+            rgba(5,6,10,.35)
+        ),
+        url("${url}")
+        `;
+
+
+    element.style.backgroundSize =
+        "cover";
+
+
+    element.style.backgroundPosition =
+        "center";
+
+}
+
+
+/* =========================================================
+   REMOVE BUTTON IMAGE
+========================================================= */
+
+document
+    .getElementById(
+        "clearButtonImage"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(!selectedElement)
+                return;
+
+
+            selectedElement.style
+                .removeProperty(
+                    "background-image"
+                );
+
+
+            delete selectedElement
+                .dataset.bgImage;
+
+
+            saveState();
+
+        }
+    );
+
+
+/* =========================================================
+   MOVE BUTTON
+========================================================= */
+
+document
+    .getElementById(
+        "moveUp"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(!selectedElement)
+                return;
+
+
+            const previous =
+                selectedElement
+                    .previousElementSibling;
+
+
+            if(previous){
+
+                previous.before(
+                    selectedElement
+                );
+
+
+                updateOrderInfo();
+
+                saveState();
+
+            }
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "moveDown"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(!selectedElement)
+                return;
+
+
+            const next =
+                selectedElement
+                    .nextElementSibling;
+
+
+            if(next){
+
+                next.after(
+                    selectedElement
+                );
+
+
+                updateOrderInfo();
+
+                saveState();
+
+            }
+
+        }
+    );
+
+
+function updateOrderInfo(){
+
+    if(!selectedElement)
+        return;
+
+
+    const parent =
+        selectedElement.parentElement;
+
+
+    if(!parent)
+        return;
+
+
+    const children =
+        [...parent.children];
+
+
+    const index =
+        children.indexOf(
+            selectedElement
+        ) + 1;
+
+
+    document
+        .getElementById(
+            "orderInfo"
+        )
+        .textContent =
+        `Position ${index} / ${children.length}`;
+
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+document
+    .getElementById(
+        "saveProfileImage"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(
+                !selectedElement ||
+                selectedElement.dataset.type !==
+                "image"
+            )
+                return;
+
+
+            const file =
+                document
+                    .getElementById(
+                        "profileImageFile"
+                    )
+                    .files[0];
+
+
+            if(!file){
+
+                alert(
+                    "Pehle photo select karo."
+                );
+
+                return;
+
+            }
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                e => {
+
+                    const img =
+                        document
+                            .getElementById(
+                                "profileImage"
+                            );
+
+
+                    const placeholder =
+                        document
+                            .getElementById(
+                                "profilePlaceholder"
+                            );
+
+
+                    img.src =
+                        e.target.result;
+
+
+                    img.style.display =
+                        "block";
+
+
+                    placeholder.style.display =
+                        "none";
+
+
+                    selectedElement.dataset.profileImage =
+                        e.target.result;
+
+
+                    saveState();
+
+                };
+
+
+            reader.readAsDataURL(
+                file
+            );
+
+        }
+    );
+
+
+function loadImageTools(element){
+
+    /* Profile image tools are ready. */
+
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+function loadExperienceTools(
+    element
+){
+
+    document
+        .getElementById(
+            "experienceURL"
+        )
+        .value =
+        element.dataset.link ||
+        "";
+
+
+    document
+        .getElementById(
+            "experienceImageURL"
+        )
+        .value =
+        element.dataset.bgImage ||
+        "";
+
+
+    document
+        .getElementById(
+            "experienceStatus"
+        )
+        .value =
+        element.classList.contains(
+            "current-card"
+        )
+        ? "current"
+        : "past";
+
+}
+
+
+document
+    .getElementById(
+        "saveExperience"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(
+                !selectedElement ||
+                selectedElement.dataset.type !==
+                "experience"
+            )
+                return;
+
+
+            const status =
+                document
+                    .getElementById(
+                        "experienceStatus"
+                    )
+                    .value;
+
+
+            const url =
+                document
+                    .getElementById(
+                        "experienceURL"
+                    )
+                    .value;
+
+
+            const image =
+                document
+                    .getElementById(
+                        "experienceImageURL"
+                    )
+                    .value;
+
+
+            selectedElement.dataset.link =
+                url;
+
+
+            selectedElement.classList.remove(
+                "current-card",
+                "past-card"
+            );
+
+
+            const statusElement =
+                selectedElement.querySelector(
+                    ".status"
+                );
+
+
+            if(
+                status === "current"
+            ){
+
+                selectedElement.classList.add(
+                    "current-card"
+                );
+
+
+                statusElement.className =
+                    "status current";
+
+
+                statusElement.textContent =
+                    "CURRENT";
+
+            }
+
+            else{
+
+                selectedElement.classList.add(
+                    "past-card"
+                );
+
+
+                statusElement.className =
+                    "status former";
+
+
+                statusElement.textContent =
+                    "FORMER";
+
+            }
+
+
+            if(image){
+
+                const bg =
+                    selectedElement.querySelector(
+                        ".exp-bg"
+                    );
+
+
+                bg.style.backgroundImage =
+                    `url("${image}")`;
+
+
+                selectedElement.dataset.bgImage =
+                    image;
+
+            }
+
+
+            saveState();
+
+        }
+    );
+
+
+/* =========================================================
+   EXPERIENCE IMAGE FROM PC
+========================================================= */
+
+document
+    .getElementById(
+        "experienceImageFile"
+    )
+    .addEventListener(
+        "change",
+        function(){
+
+            if(
+                !selectedElement ||
+                selectedElement.dataset.type !==
+                "experience"
+            )
+                return;
+
+
+            const file =
+                this.files[0];
+
+
+            if(!file)
+                return;
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                e => {
+
+                    const bg =
+                        selectedElement.querySelector(
+                            ".exp-bg"
+                        );
+
+
+                    bg.style.backgroundImage =
+                        `url("${e.target.result}")`;
+
+
+                    selectedElement.dataset.bgImage =
+                        e.target.result;
+
+
+                    saveState();
+
+                };
+
+
+            reader.readAsDataURL(
+                file
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   EXPERIENCE MOVE
+========================================================= */
+
+document
+    .getElementById(
+        "moveExperienceUp"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(!selectedElement)
+                return;
+
+
+            const previous =
+                selectedElement
+                    .previousElementSibling;
+
+
+            if(previous){
+
+                previous.before(
+                    selectedElement
+                );
+
+
+                saveState();
+
+            }
+
+        }
+    );
+
+
+document
+    .getElementById(
+        "moveExperienceDown"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            if(!selectedElement)
+                return;
+
+
+            const next =
+                selectedElement
+                    .nextElementSibling;
+
+
+            if(next){
+
+                next.after(
+                    selectedElement
+                );
+
+
+                saveState();
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+document
+    .getElementById(
+        "addButton"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            const category =
+                document
+                    .getElementById(
+                        "buttonCategory"
+                    )
+                    .value;
+
+
+            const text =
+                document
+                    .getElementById(
+                        "newButtonText"
+                    )
+                    .value
+                    .trim()
+                ||
+                "New Button";
+
+
+            const url =
+                document
+                    .getElementById(
+                        "newButtonURL"
+                    )
+                    .value
+                    .trim()
+                ||
+                "#";
+
+
+            const container =
+                document.querySelector(
+                    `[data-category="${category}"]`
+                );
+
+
+            if(!container){
+
+                alert(
+                    "Category nahi mili."
+                );
+
+                return;
+
+            }
+
+
+            const button =
+                document.createElement(
+                    "a"
+                );
+
+
+            button.href =
+                url;
+
+
+            button.className =
+                "btn secondary magnetic";
+
+
+            button.dataset.editable =
+                "true";
+
+
+            button.dataset.type =
+                "link";
+
+
+            button.textContent =
+                text;
+
+
+            container.appendChild(
+                button
+            );
+
+
+            document
+                .getElementById(
+                    "newButtonText"
+                )
+                .value =
+                "";
+
+
+            document
+                .getElementById(
+                    "newButtonURL"
+                )
+                .value =
+                "";
+
+
+            attachEditorEvents();
+
+            saveState();
+
+
+            alert(
+                "New button add ho gaya."
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   EXPERIENCE NORMAL CLICK
+========================================================= */
+
+document.addEventListener(
+    "click",
+    e => {
+
+        if(editMode)
+            return;
+
+
+        const card =
+            e.target.closest(
+                ".exp-card"
+            );
+
+
+        if(!card)
+            return;
+
+
+        const url =
+            card.dataset.link;
+
+
+        if(
+            url &&
+            url !== "#"
+        ){
+
+            window.open(
+                url,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   NORMAL LINKS IN EDIT MODE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    e => {
+
+        if(!editMode)
+            return;
+
+
+        const link =
+            e.target.closest("a");
+
+
+        if(link){
+
+            e.preventDefault();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CLOSE EDITOR
+========================================================= */
+
+document
+    .getElementById(
+        "closeEditor"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            editMode =
+                false;
+
+
+            document.body
+                .classList
+                .remove(
+                    "edit-mode"
+                );
+
+
+            clearSelection();
+
+        }
+    );
+
+
+/* =========================================================
+   SAVE STATE
+========================================================= */
+
+
+/* =========================================================
+   HISTORY + BACKUP (Undo / Redo / localStorage)
+========================================================= */
+let __hist = [];
+let __histIdx = -1;
+let __histLock = false;
+const HIST_MAX = 5;
+
+function pushHistory(){
+    if(__histLock) return;
+    try{
+        const snap = document.body.innerHTML;
+        // drop redo branch
+        __hist = __hist.slice(0, __histIdx + 1);
+        __hist.push(snap);
+        if(__hist.length > HIST_MAX){ __hist.shift(); } else { __histIdx++; }
+        if(__histIdx >= HIST_MAX) __histIdx = HIST_MAX - 1;
+        const st = document.getElementById("enhHistoryStatus");
+        if(st) st.textContent = "History " + (__histIdx+1) + " / " + __hist.length;
+    }catch(e){}
+}
+
+function applyHistorySnap(html){
+    __histLock = true;
+    try{
+        window.__premiumReady = false;
+        document.body.innerHTML = html;
+        // re-init critical UI after body replace
+        if(typeof attachEditorEvents === "function") attachEditorEvents();
+        if(typeof initEnhancedEditor === "function") initEnhancedEditor();
+        if(typeof initPremiumEffects === "function") initPremiumEffects();
+        if(typeof setupMagnetic === "function") setupMagnetic();
+        if(typeof setupTilt === "function") setupTilt();
+        if(typeof enhBindFreedomControls === "function") enhBindFreedomControls();
+        if(typeof updateGradient === "function") updateGradient();
+        const st = document.getElementById("enhHistoryStatus");
+        if(st) st.textContent = "History " + (__histIdx+1) + " / " + __hist.length;
+    }catch(e){ console.error(e); }
+    __histLock = false;
+}
+
+function undoEdit(){
+    if(__histIdx <= 0){ const st=document.getElementById("enhHistoryStatus"); if(st) st.textContent="Nothing to undo"; return; }
+    __histIdx--;
+    applyHistorySnap(__hist[__histIdx]);
+}
+
+function redoEdit(){
+    if(__histIdx >= __hist.length - 1){ const st=document.getElementById("enhHistoryStatus"); if(st) st.textContent="Nothing to redo"; return; }
+    __histIdx++;
+    applyHistorySnap(__hist[__histIdx]);
+}
+
+function saveState(){
+    try{
+        // Full HTML is too large for localStorage (~5MB+ with images). Store a light marker only.
+        localStorage.setItem("anandPortfolioBackupMeta", JSON.stringify({ t: Date.now(), note: "Use Alt+Shift+S to save file" }));
+        const bs = document.getElementById("enhBackupStatus");
+        if(bs) bs.textContent = "Edit applied ✓  ·  File save: Alt+Shift+S";
+    }catch(err){
+        console.log("Backup meta unavailable", err);
+    }
+    try{ pushHistory(); }catch(e){}
+    // toast on selectedInfo if present
+    const info = document.getElementById("selectedInfo");
+    if(info){
+        const prev = info.textContent;
+        info.textContent = "✓ Change applied — press Alt+Shift+S to save file";
+        setTimeout(()=>{ if(info.textContent.startsWith("✓ Change")) info.textContent = prev; }, 2500);
+    }
+}
+
+function restoreBackup(){
+    try{
+        const meta = localStorage.getItem("anandPortfolioBackupMeta");
+        const bs=document.getElementById("enhBackupStatus");
+        if(!meta){ if(bs) bs.textContent="No full backup (file too large for browser storage)"; return; }
+        if(bs) bs.textContent="Browser cannot store full site — use Alt+Shift+S after each session";
+        alert("Full page backup is disabled because the file is larger than browser storage.\n\nAfter editing, always save with:\nAlt + Shift + S  (admin)\nor Alt + Shift + L → 1 (public)");
+    }catch(e){ alert("Restore unavailable"); }
+}
+
+function clearBackup(){
+    try{
+        localStorage.removeItem("anandPortfolioBackup");
+        const bs=document.getElementById("enhBackupStatus");
+        if(bs) bs.textContent="Backup cleared";
+    }catch(e){}
+}
+
+function tryRestoreOnLoad(){
+    try{
+        const html = localStorage.getItem("anandPortfolioBackup");
+        if(!html) return;
+        // only auto-hint, don't force — user can click restore
+        const bs=document.getElementById("enhBackupStatus");
+        if(bs) bs.textContent="Backup available — click RESTORE if needed";
+    }catch(e){}
+}
+
+
+
+
+/* =========================================================
+   COMPLETE HTML EXPORT
+========================================================= */
+
+
+
+/* =========================================================
+   MOBILE NAV + PHONE PREVIEW (Alt+Shift+P)
+========================================================= */
+function setupMobileNav(){
+    const btn = document.getElementById("navToggle");
+    const ul = document.querySelector("nav ul");
+    if(!btn || !ul) return;
+    if(btn.dataset.bound === "1") return;
+    btn.dataset.bound = "1";
+    btn.addEventListener("click", ()=>{
+        const open = ul.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    ul.querySelectorAll("a").forEach(a=>{
+        a.addEventListener("click", ()=>{
+            ul.classList.remove("open");
+            btn.setAttribute("aria-expanded", "false");
+        });
+    });
+}
+
+function togglePhonePreview(){
+    const on = document.documentElement.classList.toggle("phone-preview");
+    const bar = document.getElementById("phonePreviewBar");
+    if(bar) bar.style.display = on ? "flex" : "none";
+    // force mobile nav behavior while previewing
+    if(on){
+        document.documentElement.style.setProperty("--previewing", "1");
+    }
+    try{ sessionStorage.setItem("anandPhonePreview", on ? "1" : "0"); }catch(e){}
+}
+
+function setupPhonePreview(){
+    const exit = document.getElementById("phonePreviewExit");
+    if(exit && !exit.dataset.bound){
+        exit.dataset.bound = "1";
+        exit.addEventListener("click", togglePhonePreview);
+    }
+    try{
+        if(sessionStorage.getItem("anandPhonePreview") === "1"){
+            document.documentElement.classList.add("phone-preview");
+            const bar = document.getElementById("phonePreviewBar");
+            if(bar) bar.style.display = "flex";
+        }
+    }catch(e){}
+}
+
+document.addEventListener("keydown", e=>{
+    if(e.altKey && e.shiftKey && e.key.toLowerCase() === "p"){
+        e.preventDefault();
+        togglePhonePreview();
+    }
+});
+
+
+
+function enhAddHighlight(){
+    const strip = document.getElementById("highlightStrip");
+    if(!strip) return;
+    const val = (enhQ("enhHighlightValue")?.value || "").trim();
+    const lab = (enhQ("enhHighlightLabel")?.value || "").trim();
+    if(!val || !lab){
+        if(enhQ("enhHighlightStatus")) enhQ("enhHighlightStatus").textContent = "Value + label dono bharo";
+        return;
+    }
+    const item = document.createElement("div");
+    item.className = "ach-item";
+    item.innerHTML = "<strong></strong><span></span>";
+    item.querySelector("strong").textContent = val;
+    item.querySelector("span").textContent = lab.toUpperCase();
+    strip.appendChild(item);
+    enhSet("enhHighlightValue", "");
+    enhSet("enhHighlightLabel", "");
+    if(enhQ("enhHighlightStatus")) enhQ("enhHighlightStatus").textContent = "Highlight added ✓";
+    saveState();
+}
+function enhClearHighlights(){
+    const strip = document.getElementById("highlightStrip");
+    if(strip) strip.innerHTML = "";
+    if(enhQ("enhHighlightStatus")) enhQ("enhHighlightStatus").textContent = "Highlights cleared";
+    saveState();
+}
+function scrollEditorToSection(kind){
+    const panel = document.getElementById("editPanel");
+    if(!panel) return;
+    // Already in this editor category — don't jump again
+    if(window.__lastEditorSection === kind) return;
+    window.__lastEditorSection = kind;
+    const map = {
+        skill: ["#enhSkillName", ".enh-title"],
+        experience: ["#enhExpName"],
+        text: ["#textContent", "#enhTextStatus"],
+        stats: ["#enhStat0Num"],
+        about: ["#enhAboutTitle"],
+        contact: ["#enhContactLabel"]
+    };
+    const ids = map[kind] || [];
+    let target = null;
+    for(const sel of ids){
+        const el = panel.querySelector(sel) || document.querySelector(sel);
+        if(el){ target = el; break; }
+    }
+    if(kind === "skill"){
+        const titles = [...panel.querySelectorAll(".enh-title")];
+        const hit = titles.find(x => /skill/i.test(x.textContent||""));
+        if(hit) target = hit;
+    }
+    if(kind === "experience"){
+        const titles = [...panel.querySelectorAll(".enh-title, .tool-title")];
+        const hit = titles.find(x => /experience|creator|server/i.test(x.textContent||""));
+        if(hit) target = hit;
+    }
+    if(target){
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        panel.classList.add("edit-panel-pulse");
+        setTimeout(()=>panel.classList.remove("edit-panel-pulse"), 600);
+    }
+}
+
+
+/* Contact buttons editor */
+let enhSelectedContactBtn = null;
+function enhContactButtons(){
+    return [...document.querySelectorAll(".contact-links > a, .contact-links > button")];
+}
+function enhSelectContactBtn(btn){
+    enhContactButtons().forEach(b=>b.classList.remove("enh-card-selected"));
+    enhSelectedContactBtn = btn;
+    if(btn) btn.classList.add("enh-card-selected");
+    const label = (btn.textContent || "").replace(/\s+/g," ").trim();
+    const isModal = btn.classList.contains("js-open-cv-modal");
+    enhSet("enhContactLabel", label);
+    enhSet("enhContactURL", isModal ? "" : (btn.getAttribute("href") || btn.dataset.url || ""));
+    const kind = enhQ("enhContactKind");
+    if(kind) kind.value = isModal ? "modal" : "link";
+    if(enhQ("enhContactStatus")) enhQ("enhContactStatus").textContent = "Selected: " + label;
+}
+function enhBindContactSelection(){
+    const box = document.querySelector(".contact-links");
+    if(!box || box.dataset.enhContactBound === "1") return;
+    box.dataset.enhContactBound = "1";
+    box.addEventListener("click", e=>{
+        if(!editMode) return;
+        const btn = e.target.closest(".contact-links > a, .contact-links > button");
+        if(!btn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        enhSelectContactBtn(btn);
+        if(typeof selectElement === "function") selectElement(btn);
+        scrollEditorToSection("contact");
+    }, true);
+}
+function enhSaveContactBtn(){
+    const btn = enhSelectedContactBtn;
+    if(!btn){ if(enhQ("enhContactStatus")) enhQ("enhContactStatus").textContent="Pehle button select karo"; return; }
+    const label = (enhQ("enhContactLabel")?.value || "Button").trim();
+    const url = (enhQ("enhContactURL")?.value || "").trim();
+    const kind = enhQ("enhContactKind")?.value || "link";
+    btn.textContent = label;
+    if(kind === "modal"){
+        btn.classList.add("js-open-cv-modal");
+        if(btn.tagName === "A"){ btn.setAttribute("href", "#"); }
+        else { btn.removeAttribute("href"); }
+        btn.dataset.url = "";
+    } else {
+        btn.classList.remove("js-open-cv-modal");
+        if(btn.tagName === "A"){
+            btn.setAttribute("href", url || "#");
+            if(url && !url.startsWith("mailto:") && !url.startsWith("#")) btn.setAttribute("target","_blank");
+        } else {
+            // convert button to anchor for external links
+            const a = document.createElement("a");
+            a.className = btn.className.replace("js-open-cv-modal","").trim();
+            a.classList.add("magnetic");
+            a.textContent = label;
+            a.setAttribute("href", url || "#");
+            a.setAttribute("data-editable","");
+            a.setAttribute("data-type","link");
+            if(url && !url.startsWith("mailto:") && !url.startsWith("#")) a.setAttribute("target","_blank");
+            btn.replaceWith(a);
+            enhSelectedContactBtn = a;
+        }
+    }
+    if(typeof initCvContactModal === "function"){
+        const form = document.getElementById("cvContactForm");
+        if(form) form.dataset.bound = "";
+        initExtLinks();
+initCvContactModal();
+    }
+    saveState();
+    if(enhQ("enhContactStatus")) enhQ("enhContactStatus").textContent = "Saved ✓";
+}
+function enhAddContactBtn(){
+    const box = document.querySelector(".contact-links");
+    if(!box) return;
+    const a = document.createElement("a");
+    a.className = "magnetic";
+    a.setAttribute("data-editable","");
+    a.setAttribute("data-type","link");
+    a.href = "#";
+    a.textContent = "New Link";
+    box.appendChild(a);
+    box.dataset.enhContactBound = "";
+    enhBindContactSelection();
+    enhSelectContactBtn(a);
+    saveState();
+}
+function enhMoveContact(dir){
+    const btn = enhSelectedContactBtn;
+    if(!btn || !btn.parentElement) return;
+    if(dir < 0 && btn.previousElementSibling) btn.parentElement.insertBefore(btn, btn.previousElementSibling);
+    if(dir > 0 && btn.nextElementSibling) btn.parentElement.insertBefore(btn.nextElementSibling, btn);
+    saveState();
+}
+function enhDeleteContactBtn(){
+    if(!enhSelectedContactBtn) return;
+    if(!confirm("Delete this button?")) return;
+    enhSelectedContactBtn.remove();
+    enhSelectedContactBtn = null;
+    saveState();
+    if(enhQ("enhContactStatus")) enhQ("enhContactStatus").textContent = "Deleted";
+}
+
+function stripEditorForPublic(clone){
+    // Remove all editor UI
+    clone.querySelectorAll("#editPanel,#enhancedEditorTools,#phonePreviewBar").forEach(el=>el.remove());
+    clone.querySelector("html")?.classList.remove("phone-preview");
+
+    // Clean selection / ready flags / edit-mode class
+    clone.querySelectorAll("[data-editor-ready],[data-magnetic-ready],[data-tilt-ready],[data-enh-exp-bound],[data-enh-skill-bound],[data-enh-text-bound],[data-counted],[data-premium-bound],[data-bound]").forEach(el=>{
+        delete el.dataset.editorReady; delete el.dataset.magneticReady; delete el.dataset.tiltReady;
+        delete el.dataset.enhExpBound; delete el.dataset.enhSkillBound; delete el.dataset.enhTextBound;
+        delete el.dataset.counted; delete el.dataset.premiumBound; delete el.dataset.bound;
+    });
+    // Stats must start at 0 so public count-up is visible
+    clone.querySelectorAll("strong[data-count]").forEach(el=>{
+        delete el.dataset.counted;
+        const suf = el.getAttribute("data-suffix");
+        el.textContent = "0" + (suf !== null && suf !== undefined ? suf : "");
+    });
+    clone.querySelectorAll(".editor-selected,.enh-card-selected,.enh-skill-selected,.enh-text-selected").forEach(el=>{
+        el.classList.remove("editor-selected","enh-card-selected","enh-skill-selected","enh-text-selected");
+    });
+    clone.querySelector("body")?.classList.remove("edit-mode");
+
+    // IMPORTANT: admin file has ONE big <script> with both animations + editor.
+    // Old logic deleted the whole script → public site had zero JS (no animations, no links).
+    // Replace every script with a clean public runtime that keeps effects + links.
+    const publicRuntime = `
 /* Public runtime — same effects as admin (no editor) */
 (function(){
   "use strict";
@@ -4366,4 +8089,590 @@ button.js-open-cv-modal.btn{
     });
   })();
 })();
-</script></body></html>
+`;
+
+    // Keep head contact API config (CV_CONTACT_API / KEY); drop other scripts
+    const keepCfg = [];
+    clone.querySelectorAll("script").forEach(sc => {
+        const txt = sc.textContent || "";
+        if (txt.includes("CV_CONTACT_API") && !txt.includes("function ")) {
+            keepCfg.push(txt);
+        }
+        sc.remove();
+    });
+    const head = clone.querySelector("head") || clone;
+    keepCfg.forEach(txt => {
+        const c = clone.ownerDocument.createElement("script");
+        c.textContent = txt;
+        head.insertBefore(c, head.firstChild);
+    });
+    // Fallback if config was only in body runtime
+    if (!keepCfg.length) {
+        const c = clone.ownerDocument.createElement("script");
+        c.textContent = 'window.CV_CONTACT_API=window.CV_CONTACT_API||' + JSON.stringify(window.CV_CONTACT_API || "/api/contact") + ';window.CV_CONTACT_API_KEY=window.CV_CONTACT_API_KEY||' + JSON.stringify(window.CV_CONTACT_API_KEY || "") + ';';
+        head.insertBefore(c, head.firstChild);
+    }
+    const s = clone.ownerDocument.createElement("script");
+    s.textContent = publicRuntime;
+    (clone.querySelector("body") || clone).appendChild(s);
+}
+function getExportHTML(kind="admin"){
+    const clone=document.documentElement.cloneNode(true);
+    if(kind==="public") stripEditorForPublic(clone);
+    else{
+        clone.querySelectorAll("[data-editor-ready],[data-magnetic-ready],[data-tilt-ready],[data-enh-exp-bound],[data-enh-skill-bound],[data-enh-text-bound],[data-bound],[data-premium-bound],[data-counted]").forEach(el=>{
+            delete el.dataset.editorReady; delete el.dataset.magneticReady; delete el.dataset.tiltReady;
+            delete el.dataset.enhExpBound; delete el.dataset.enhSkillBound; delete el.dataset.enhTextBound;
+            delete el.dataset.bound; delete el.dataset.premiumBound; delete el.dataset.counted;
+        });
+        clone.querySelectorAll(".editor-selected,.enh-card-selected,.enh-skill-selected,.enh-text-selected").forEach(el=>el.classList.remove("editor-selected","enh-card-selected","enh-skill-selected","enh-text-selected"));
+        clone.querySelector("#editPanel")?.removeAttribute("style");
+    }
+    return "<!DOCTYPE html>\n"+clone.outerHTML;
+}
+function downloadHTMLFile(html,name){
+    const blob=new Blob([html],{type:"text/html"});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement("a"); a.href=url; a.download=name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function getCompleteHTML(){ return getExportHTML("admin"); }
+
+
+/* =========================================================
+   CONNECT FILE
+========================================================= */
+
+document
+    .getElementById(
+        "connectFile"
+    )
+    .addEventListener(
+        "click",
+        async () => {
+
+            if(
+                !window.showOpenFilePicker
+            ){
+
+                alert(
+                    "Is browser me File System Access support nahi hai. Download Updated index.html use karo."
+                );
+
+                return;
+
+            }
+
+
+            try{
+
+                const handles =
+                    await window
+                        .showOpenFilePicker({
+
+                            multiple:false,
+
+                            types:[
+                                {
+                                    description:
+                                        "HTML File",
+
+                                    accept:{
+                                        "text/html":[
+                                            ".html"
+                                        ]
+                                    }
+                                }
+                            ]
+
+                        });
+
+
+                connectedFileHandle =
+                    handles[0];
+
+
+                document
+                    .getElementById(
+                        "fileStatus"
+                    )
+                    .textContent =
+                    "Connected: " +
+                    (
+                        connectedFileHandle.name ||
+                        "index.html"
+                    );
+
+            }
+
+            catch(err){
+
+                console.log(err);
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   SAVE DIRECTLY TO PC
+========================================================= */
+
+document
+    .getElementById(
+        "saveFile"
+    )
+    .addEventListener(
+        "click",
+        async () => {
+
+            const html =
+                getCompleteHTML();
+
+
+            if(!connectedFileHandle){
+
+                alert(
+                    "Pehle 'Connect index.html' par click karke apni file select karo."
+                );
+
+                return;
+
+            }
+
+
+            try{
+
+                const permission =
+                    await connectedFileHandle
+                        .queryPermission({
+                            mode:"readwrite"
+                        });
+
+
+                if(
+                    permission !==
+                    "granted"
+                ){
+
+                    const request =
+                        await connectedFileHandle
+                            .requestPermission({
+                                mode:"readwrite"
+                            });
+
+
+                    if(
+                        request !==
+                        "granted"
+                    ){
+
+                        alert(
+                            "File write permission nahi mili."
+                        );
+
+                        return;
+
+                    }
+
+                }
+
+
+                const writable =
+                    await connectedFileHandle
+                        .createWritable();
+
+
+                await writable.write(
+                    html
+                );
+
+
+                await writable.close();
+
+
+                document
+                    .getElementById(
+                        "fileStatus"
+                    )
+                    .textContent =
+                    "✓ Saved directly to PC";
+
+
+                alert(
+                    "index.html successfully update ho gaya."
+                );
+
+            }
+
+            catch(err){
+
+                console.error(err);
+
+
+                alert(
+                    "Direct save fail hua. 'Download Updated index.html' use karo."
+                );
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+document
+    .getElementById(
+        "downloadFile"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            const html =
+                getCompleteHTML();
+
+
+            const blob =
+                new Blob(
+                    [html],
+                    {
+                        type:"text/html"
+                    }
+                );
+
+
+            const url =
+                URL.createObjectURL(
+                    blob
+                );
+
+
+            const a =
+                document.createElement(
+                    "a"
+                );
+
+
+            a.href =
+                url;
+
+
+            a.download =
+                "index.html";
+
+
+            document.body.appendChild(
+                a
+            );
+
+
+            a.click();
+
+
+            a.remove();
+
+
+            setTimeout(
+                () => {
+
+                    URL.revokeObjectURL(
+                        url
+                    );
+
+                },
+                1000
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+
+/* =========================================================
+   PREMIUM EFFECTS INIT (admin + live preview)
+========================================================= */
+function initPremiumEffects(){
+  if(window.__premiumReady && document.getElementById("cursorDot")?.dataset.premiumBound) return;
+  window.__premiumReady = true;
+
+  /* Stats count-up */
+  (function(){
+    function animateCount(el){
+      const target = parseFloat(el.dataset.count || "0");
+      const suffix = el.dataset.suffix || "";
+      if(el.dataset.counted === "1") return;
+      el.dataset.counted = "1";
+      const dur = 1300;
+      const start = performance.now();
+      const from = 0;
+      function frame(t){
+        const p = Math.min(1, (t - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(from + (target - from) * eased) + suffix;
+        if(p < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+    const box = document.querySelector(".stats");
+    if(box){
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(!en.isIntersecting) return;
+          box.querySelectorAll("strong[data-count]").forEach(animateCount);
+          obs.disconnect();
+        });
+      }, { threshold: 0.35 });
+      obs.observe(box);
+    }
+  })();
+
+  const bar = document.getElementById("scrollProgress");
+  function updateProgress(){
+    if(!bar) return;
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+  }
+  window.addEventListener("scroll", updateProgress, {passive:true});
+  updateProgress();
+
+  const dot = document.getElementById("cursorDot");
+  const ring = document.getElementById("cursorRing");
+  let mx=0,my=0,rx=0,ry=0;
+  if(dot && ring && window.matchMedia("(hover:hover) and (pointer:fine)").matches){
+    document.addEventListener("mousemove", e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + "px";
+      dot.style.top = my + "px";
+    });
+    (function loop(){
+      rx += (mx - rx) * 0.18;
+      ry += (my - ry) * 0.18;
+      ring.style.left = rx + "px";
+      ring.style.top = ry + "px";
+      requestAnimationFrame(loop);
+    })();
+    const hoverSel = "a,button,.btn,.visit,.skill-card,.card,.exp-card,.tags span,.nav-btn";
+    document.querySelectorAll(hoverSel).forEach(el=>{
+      el.addEventListener("mouseenter",()=>document.body.classList.add("cursor-hover"));
+      el.addEventListener("mouseleave",()=>document.body.classList.remove("cursor-hover"));
+    });
+  }
+
+  const hero = document.querySelector(".hero");
+  if(hero){
+    requestAnimationFrame(()=>requestAnimationFrame(()=>hero.classList.add("hero-ready")));
+  }
+
+  document.querySelectorAll(".exp-card").forEach(card=>{
+    if(!card.querySelector(".exp-glow-border")){
+      const g=document.createElement("div");
+      g.className="exp-glow-border";
+      g.style.cssText="position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;z-index:2;opacity:0;transition:opacity .4s;background:conic-gradient(from var(--glow-angle,0deg),transparent 0%,rgba(139,92,246,0) 20%,rgba(139,92,246,.55) 35%,rgba(34,211,238,.7) 50%,rgba(74,222,128,.4) 65%,transparent 80%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;";
+      card.appendChild(g);
+    }
+  });
+}
+
+
+
+
+/* External links without status-bar URL + robust DM modal */
+function initExtLinks(){
+  if(window.__extLinksBound) return;
+  window.__extLinksBound = true;
+  document.addEventListener("click", function(e){
+    const a = e.target.closest(".js-ext-link");
+    if(!a) return;
+    if(typeof editMode !== "undefined" && editMode) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const url = a.getAttribute("data-url") || a.dataset.url || "";
+    if(!url) return;
+    if(url.startsWith("mailto:")) window.location.href = url;
+    else window.open(url, "_blank", "noopener,noreferrer");
+  }, true);
+}
+function isOkEmail(s){
+  s = String(s || "").trim().toLowerCase();
+  if(!s) return false;
+  // Accept Gmail, Outlook, Yahoo, custom domains, plus-tags, dots
+  if(s.indexOf(" ") >= 0) return false;
+  var at = s.indexOf("@");
+  if(at < 1) return false;
+  var domain = s.slice(at + 1);
+  if(domain.indexOf(".") < 1) return false;
+  if(domain.endsWith(".")) return false;
+  if(s.indexOf("@@") >= 0) return false;
+  return true;
+}
+
+function initCvContactModal(){
+  const overlay = document.getElementById("cvContactOverlay");
+  const form = document.getElementById("cvContactForm");
+  if(!overlay || !form) return;
+  // Always re-bind openers via delegation once
+  if(!window.__cvModalDelegBound){
+    window.__cvModalDelegBound = true;
+    document.addEventListener("click", function(e){
+      const opener = e.target.closest(".js-open-cv-modal");
+      if(!opener) return;
+      if(typeof editMode !== "undefined" && editMode) return;
+      e.preventDefault();
+      e.stopPropagation();
+      overlay.classList.add("open");
+      overlay.style.display = "flex";
+      const n = document.getElementById("cvName");
+      if(n) setTimeout(()=>n.focus(), 50);
+    }, true);
+  }
+  if(form.dataset.bound === "1") return;
+  form.dataset.bound = "1";
+  const status = document.getElementById("cvModalStatus");
+  const sendBtn = document.getElementById("cvSend");
+  if(!window.CV_CONTACT_API) window.CV_CONTACT_API = "https://modmail-zayen-anand.wisp.uno/api/contact";
+  const apiUrl = window.CV_CONTACT_API;
+
+  function setStatus(msg, kind){
+    if(!status) return;
+    status.textContent = msg || "";
+    status.className = "cv-modal-status" + (kind ? " " + kind : "");
+  }
+  function closeModal(){
+    overlay.classList.remove("open");
+    overlay.style.display = "none";
+    setStatus("");
+  }
+  document.getElementById("cvModalClose")?.addEventListener("click", closeModal);
+  document.getElementById("cvModalX")?.addEventListener("click", closeModal);
+  overlay.addEventListener("click", e=>{ if(e.target === overlay) closeModal(); });
+  document.addEventListener("keydown", e=>{
+    if(e.key === "Escape" && overlay.classList.contains("open")) closeModal();
+  });
+
+  form.addEventListener("submit", async e=>{
+    e.preventDefault();
+    const name = (document.getElementById("cvName").value || "").trim();
+    const discord = (document.getElementById("cvDiscord").value || "").trim();
+    const email = (document.getElementById("cvEmail")?.value || "").trim();
+    const message = (document.getElementById("cvMessage").value || "").trim();
+    const website = (document.getElementById("cvWebsite").value || "").trim();
+    if(name.length < 2){ setStatus("Please enter your name.", "err"); return; }
+    if(discord.length < 2 && !email){ setStatus("Enter Discord username or email (at least one).", "err"); return; }
+    if(discord.length > 0 && discord.length < 2){ setStatus("Discord username looks too short.", "err"); return; }
+    if(email && !isOkEmail(email)){ setStatus("Enter a valid email address (Gmail, Outlook, etc.).", "err"); return; }
+    if(message.length < 10){ setStatus("Please write a slightly longer message.", "err"); return; }
+    sendBtn.disabled = true;
+    setStatus("Sending…");
+    try{
+      const headers = { "Content-Type": "application/json" };
+      if(window.CV_CONTACT_API_KEY) headers["X-API-Key"] = window.CV_CONTACT_API_KEY;
+      const res = await fetch(apiUrl, {
+        method: "POST",
+        headers,
+        body: JSON.stringify({ name, discord, email, message, website, source: "CV Website" })
+      });
+      const data = await res.json().catch(()=>({}));
+      if(!res.ok || data.ok === false){
+        setStatus(data.error || "Unable to send message. Please try again.", "err");
+      }else{
+        setStatus("Message sent successfully ✓", "ok");
+        form.reset();
+        setTimeout(closeModal, 1400);
+      }
+    }catch(err){
+      setStatus("Unable to send message. Please try again.", "err");
+    }finally{
+      sendBtn.disabled = false;
+    }
+  });
+}
+
+
+
+/* One-time clean rebind for admin effects */
+document.querySelectorAll("[data-magnetic-ready],[data-tilt-ready],[data-premium-bound]").forEach(el=>{
+  delete el.dataset.magneticReady;
+  delete el.dataset.tiltReady;
+  delete el.dataset.premiumBound;
+});
+window.__premiumReady = false;
+
+attachEditorEvents();
+if(typeof enhNormalizeExpVisits==="function") enhNormalizeExpVisits();
+initEnhancedEditor();
+
+updateGradient();
+setupMobileNav();
+setupPhonePreview();
+initExtLinks();
+initCvContactModal();
+initPremiumEffects();
+setupMagnetic();
+setupTilt();
+
+// seed undo history with initial state
+setTimeout(()=>{ try{ pushHistory(); }catch(e){} }, 300);
+
+
+console.log(
+`
+ANAND SAGAR GUPTA PORTFOLIO
+
+EDITOR:
+ALT + SHIFT + M
+
+NEW EFFECTS:
+
+✓ Mouse-follow spotlight
+✓ Blue + Green glow
+✓ Magnetic navigation
+✓ Magnetic buttons
+✓ Magnetic skill cards
+✓ Magnetic skill tags
+✓ Magnetic stats
+✓ Magnetic about cards
+✓ 3D skill-card tilt
+✓ 3D experience tilt
+✓ Experience blue/green states
+✓ Cursor ambient light
+
+SKILLS:
+
+Java
+Python
+C / C++ / C#
+Graphic Designing
+Discord Management
+Leadership
+
+CURRENTLY LEARNING:
+
+C / C++ / C#
+Graphic Designing
+
+SAVE:
+
+Connect index.html
+→ Save to PC
+
+OR:
+
+Download Updated index.html
+`
+);
+
+</script>
+
+
+
+</body></html>
